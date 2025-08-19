@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+  </head>
+  <body class="bg-[linear-gradient(to_bottom_right,_#e2c3a3,_#975d37)] relative">
+    <!-- start navbar -->
+    <header class=" w-full h-1/4 z-50 flex justify-center py-1.5 fixed">
+      <nav class="w-3/4 h-1/12 fixed flex justify-between items-center px-8 bg-linear-to-l from-amber-100/20 via-amber-50/40 to-amber-100/20 backdrop-blur-[4px]  rounded-3xl shadow-md z-50 animation-open-up">
+          <img class="w-1/3 sm:w-1/6 self-center " src="css/sourecs/images/navgation/cafe-logo.png" alt="">
+          <div class="flex justify-between items-center">
+            <!-- start the prime nav -->
+            <ul  class=" hidden sm:flex gap-6 text-[min(2vw,24px)] font-title text-mywhite font-semibold ">
+              <li class="hover:scale-[1.1]"><a href="">About</a></li>
+              <li class="hover:scale-[1.1]"><a href="">Services</a></li>
+              <li class="hover:scale-[1.1]"><a href="">Menu</a></li>
+              <li class="hover:scale-[1.1]"><a href="">Prodects</a></li>
+              <li class="hover:scale-[1.1]"><a href="">Location</a></li>
+              <li class="hover:scale-[1.1]"><a href="">Contact</a></li>
+              <li class="hover:scale-[1.1] pl-4 border-l-2"><a href="">log in</a></li>
+            </ul>
+          </div>
+          <!-- end the prime nav -->
+          <!-- start mobile menu --> 
+          <button id="b-menu" class="w-1/12 h-3/4 flex flex-col justify-center items-center gap-2 relative sm:hidden ">
+            <div class="bar w-full h-[10%] rounded-2xl bg-mywhite"></div>
+            <div class="bar w-full h-[10%] rounded-2xl bg-mywhite">
+          </button>
+          <!-- end mobile menu -->
+      </nav>
+      <div class="the-menu sm:hidden w-2/3 h-0 flex justify-center items-center p-4 rounded-2xl overflow-hidden absolute bg-linear-to-l from-amber-100/20 via-amber-50/10 to-amber-100/20 backdrop-blur-[4px] animation-open-up ">
+            <ul  class="flex flex-col gap-2 text-center text-[min(4vw,40px)] font-title text-mywhite font-semibold ">
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">About</a></li class="link">
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Services</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Menu</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Prodects</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Location</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Contact</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1] border-t-2 px-14 pt-2"><a href="">log in</a></li>
+            </ul>
+          </div>
+    </header>
+    <!-- end navbar -->
+    <!-- start hero section -->
+    <section class="relative z-10 w-full h-full flex justify-center bg-[radial-gradient(circle,_#e2c3a3,_#975d37)] overflow-hidden bg-center bg-cover">
+      <main class=" w-full h-full z-30 flex flex-col justify-end items-center overflow-hidden" >
+        <span class="sm:absolute  z-30 static top-1/12 py-4 font-semibold flex flex-col justify-center items-center animation-open-up animation-delay">
+          <h1 class="font-title text-[min(10vw,50px)] text-mygold drop-shadow-[0_0_2px_#13121341]">Cafeccino</h1>
+          <p id="caption" class="font-prg text-[min(7vw,30px)] text-mybrawon">happy to see you !</p>
+        </span>
+        <img class=" md:w-2/5 w-3/4 drop-shadow-[2px_10px_0px_rgba(19,18,19,0.199)] animation-open-up" src="css/sourecs/images/hero-section/iced.png" alt="">
+      </main>
+      <img id="beans" class="absolute z-30 w-4/5 self-center animation-up-down drop-shadow-[2px_5px_5px_rgba(19,18,19,0.199)] animation-open-up" src="css/sourecs/images/hero-section/front-beans.png" alt="">
+      <div class="absolute z-20 w-full h-1/5 rounded-t-full bottom-0 bg-mywhite animation-open-up"></div>
+    </section>
+    <!-- end hero sectoin -->
+    <!-- start about section -->
+    <section class="w-full h-full flex justify-center items-center">
+      <main class="w-11/12 h-full flex justify-center items-center">
+        <div class="opacity-40 blur-[2px] w-full md:opacity-100 md:blur-[0px] md:w-1/3 relative overflow-hidden  h-full flex justify-center items-center self-start">
+          <img class="absolute z-20 w-3/5 rotate-[30deg] drop-shadow-2xl" src="css/sourecs/images/about/cup.png" alt="">
+          <img class="absolute w-full rotate-[20deg]" src="css/sourecs/images/about/coffee-lecud.png" alt="">
+          <img class="absolute w-11/12 animation-up-down delay-1000" src="css/sourecs/images/about/beans.png" alt="">
+          <div class="w-3/4 h-11/12 flex justify-end items-center self-start rounded-b-full bg-mywhite shadow-2xs "> 
+          </div>
+        </div>
+        <div class="absolute z-30 sm:static w-2/3 h-3/4 flex flex-col justify-center items-center gap-4 ">
+          <h1 class="w-full rounded-2xl font-title text-center text-[min(10vw,50px)] text-shadow-md text-mybrawon bg-mywhite" >about us</h1>
+          <div class=" w-full h-full flex flex-col justify-between items-start gap-4 p-6 rounded-2xl ">
+            <div class=" h-3/4 felx text-center md:text-start justify-between items-center gap-16">
+              <h1 class=" font-prg font-semibold text-[min(6vw,40px)] text-mywhite">what is Cafeccino ?</h1>
+              <span class="font-prg font-medium text-[min(3vw,19px)] text-mywhite">
+                <p>Nestled in the heart of Al-Mokambo, right beside the familiar charm of Popeye, Cafeccino is more than just a coffee shop—it’s a sanctuary for those who crave warmth, connection, and a perfectly brewed cup. Whether you're escaping the noise of the city or meeting up with friends for a late-night laugh, Cafeccino offers a space that feels both familiar and refreshingly new.</p>
+                <p class="font-semibold">Coffee alone won’t fix your mood. A seat at Cafeccino will.</p>
+              </span>
+            </div>
+            <div class="h-1/4 felx text-center md:text-start justify-start items-center gap-4 py-6">
+              <h1 class="font-prg font-semibold text-[min(3vw,20px)] text-mywhite">Opening Hours :</h1>
+              <span class="font-prg font-medium text-[min(2vw,15px)] text-mywhite">
+                <p class="font-semibold">Daily from 10:00 AM to 12:00 Midnight</p>
+                <p>Subject to slight changes during holidays or special events</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- end about section -->
+  </body>
+  <script src="js/script.js"></script>
+</html>
