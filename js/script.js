@@ -1,4 +1,18 @@
 
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        navbar.style.translate = " 0 -100%";
+        the_menu.style.translate = " 0 -100%";
+    } else {
+        navbar.style.translate = "0 0";
+        the_menu.style.translate = "0 0";
+    }
+    lastScrollY = window.scrollY;
+});
+
 const btn_menu = document.getElementById('b-menu');
 const bars = document.querySelectorAll('.bar')
 const the_menu = document.querySelector('.the-menu');
@@ -8,7 +22,7 @@ btn_menu.onclick = function(){
     bars[1].classList.toggle('-translate-y-[150%]');
     bars[0].classList.toggle('rotate-45');
     bars[1].classList.toggle('-rotate-45');
-    the_menu.classList.toggle('mt-[10%]');
+    the_menu.classList.toggle('mt-[20%]');
     setTimeout(() => {
         the_menu.classList.toggle('h-[200%]');
         
@@ -23,7 +37,10 @@ btn_menu.onclick = function(){
     }, 200);
     
 }
-
+for (let i = 0; i < links.length; i++) {
+    links[i].onclick = () => btn_menu.click();
+    
+}
 const beans = document.getElementById('beans');
 window.onload = function () {
     setTimeout(() => {

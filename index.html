@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" sizes="32x32" href="css/sourecs/images/about/cafe-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -11,58 +12,59 @@
   <body class="bg-[linear-gradient(to_bottom_right,_#e2c3a3,_#975d37)] relative">
     <!-- start navbar -->
     <header class=" w-full h-1/4 z-50 flex justify-center py-1.5 fixed">
-      <nav class="w-3/4 h-1/12 fixed flex justify-between items-center px-8 bg-linear-to-l from-amber-100/20 via-amber-50/40 to-amber-100/20 backdrop-blur-[4px]  rounded-3xl shadow-md z-50 animation-open-up">
-          <img class="w-1/3 sm:w-1/6 self-center " src="css/sourecs/images/navgation/cafe-logo.png" alt="">
+      <nav id="navbar" class="w-3/4 h-1/12 fixed flex justify-between items-center px-8 bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/20 backdrop-blur-[4px]  rounded-3xl shadow-[0_0_0_1.2px_rgba(255,255,255,0.25)] z-50 animation-open-up">
+          <img class="w-1/3 md:w-1/6 self-center " src="css/sourecs/images/navgation/cafe-logo.png" alt="">
           <div class="flex justify-between items-center">
             <!-- start the prime nav -->
             <ul  class=" hidden sm:flex gap-6 text-[min(2vw,24px)] font-title text-mywhite font-semibold ">
-              <li class="hover:scale-[1.1]"><a href="">About</a></li>
-              <li class="hover:scale-[1.1]"><a href="">Services</a></li>
-              <li class="hover:scale-[1.1]"><a href="">Menu</a></li>
-              <li class="hover:scale-[1.1]"><a href="">Prodects</a></li>
-              <li class="hover:scale-[1.1]"><a href="">Location</a></li>
-              <li class="hover:scale-[1.1]"><a href="">Contact</a></li>
+              <li class="hover:scale-[1.1]"><a href="#about">About</a></li>
+              <li class="hover:scale-[1.1]"><a href="#services">Services</a></li>
+              <li class="hover:scale-[1.1]"><a href="#menu">Menu</a></li>
+              <li class="hover:scale-[1.1]"><a href="#prodects">Prodects</a></li>
+              <li class="hover:scale-[1.1]"><a href="#location">Location</a></li>
+              <li class="hover:scale-[1.1]"><a href="#contact">Contact</a></li>
               <li class="hover:scale-[1.1] pl-4 border-l-2"><a href="">log in</a></li>
             </ul>
           </div>
           <!-- end the prime nav -->
           <!-- start mobile menu --> 
-          <button id="b-menu" class="w-1/12 h-3/4 flex flex-col justify-center items-center gap-2 relative sm:hidden ">
+          <button id="b-menu" class="w-1/12 md:w-1/12 sm:w-1/6 h-3/4 flex flex-col justify-center items-center gap-2 relative sm:hidden ">
             <div class="bar w-full h-[10%] rounded-2xl bg-mywhite"></div>
             <div class="bar w-full h-[10%] rounded-2xl bg-mywhite">
           </button>
           <!-- end mobile menu -->
       </nav>
-      <div class="the-menu sm:hidden w-2/3 h-0 flex justify-center items-center p-4 rounded-2xl overflow-hidden absolute bg-linear-to-l from-amber-100/20 via-amber-50/10 to-amber-100/20 backdrop-blur-[4px] animation-open-up ">
-            <ul  class="flex flex-col gap-2 text-center text-[min(4vw,40px)] font-title text-mywhite font-semibold ">
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">About</a></li class="link">
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Services</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Menu</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Prodects</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Location</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="">Contact</a></li>
+      <div class="the-menu sm:hidden w-2/3 h-0 flex justify-center items-center p-4 rounded-2xl overflow-hidden absolute bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 shadow-[0_0_0_1.2px_rgba(255,255,255,0.25)] backdrop-blur-[4px] animation-open-up ">
+            <ul  class="flex flex-col gap-2 text-center text-[clamp(1.5rem,4vw,2.5rem)] font-title text-mywhite font-semibold ">
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#about">About</a></li class="link">
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#services">Services</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#menu">Menu</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#prodects">Prodects</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#lecoation">Location</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#conetact">Contact</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1] border-t-2 px-14 pt-2"><a href="">log in</a></li>
             </ul>
           </div>
     </header>
     <!-- end navbar -->
     <!-- start hero section -->
-    <section class="relative z-10 w-full h-full flex justify-center bg-[radial-gradient(circle,_#e2c3a3,_#975d37)] overflow-hidden bg-center bg-cover">
+    <section class="relative z-10 w-full h-full flex justify-center bg-[radial-gradient(circle,_#e2c3a3,_#975d37)] bg-center bg-cover">
       <main class=" w-full h-full z-30 flex flex-col justify-end items-center overflow-hidden" >
         <span class="sm:absolute  z-30 static top-1/12 py-4 font-semibold flex flex-col justify-center items-center animation-open-up animation-delay">
-          <h1 class="font-title text-[min(10vw,50px)] text-mygold drop-shadow-[0_0_2px_#13121341]">Cafeccino</h1>
-          <p id="caption" class="font-prg text-[min(7vw,30px)] text-mybrawon">happy to see you !</p>
+          <h1 class="font-title text-[clamp(2rem,5vw,3rem)] text-mygold drop-shadow-[0_0_2px_#13121341]">Cafeccino</h1>
+          <p id="caption" class="font-prg text-[clamp(1.5rem,4vw,2.5rem)] text-mybrawon">happy to see you !</p>
         </span>
-        <img class=" md:w-2/5 w-3/4 drop-shadow-[2px_10px_0px_rgba(19,18,19,0.199)] animation-open-up" src="css/sourecs/images/hero-section/iced.png" alt="">
+        <img class=" md:w-2/5 w-full drop-shadow-[2px_10px_0px_rgba(19,18,19,0.199)] animation-open-up" src="css/sourecs/images/hero-section/iced.png" alt="">
       </main>
       <img id="beans" class="absolute z-30 w-4/5 self-center animation-up-down drop-shadow-[2px_5px_5px_rgba(19,18,19,0.199)] animation-open-up" src="css/sourecs/images/hero-section/front-beans.png" alt="">
       <div class="absolute z-20 w-full h-1/5 rounded-t-full bottom-0 bg-mywhite animation-open-up"></div>
     </section>
     <!-- end hero sectoin -->
     <!-- start about section -->
-    <section class="w-full h-full flex justify-center items-center">
+    <a id="about" href=""></a>
+    <section class="w-full h-full flex justify-center items-center overflow-hidden">
       <main class="w-11/12 h-full flex justify-center items-center">
-        <div class="opacity-40 blur-[2px] w-full md:opacity-100 md:blur-[0px] md:w-1/3 relative overflow-hidden  h-full flex justify-center items-center self-start">
+        <div class="opacity-50 blur-[2px] w-full md:opacity-100 md:blur-[0px] md:w-1/3 relative overflow-hidden  h-full flex justify-center items-center self-start">
           <img class="absolute z-20 w-3/5 rotate-[30deg] drop-shadow-2xl" src="css/sourecs/images/about/cup.png" alt="">
           <img class="absolute w-full rotate-[20deg]" src="css/sourecs/images/about/coffee-lecud.png" alt="">
           <img class="absolute w-11/12 animation-up-down delay-1000" src="css/sourecs/images/about/beans.png" alt="">
@@ -70,18 +72,18 @@
           </div>
         </div>
         <div class="absolute z-30 sm:static w-2/3 h-3/4 flex flex-col justify-center items-center gap-4 ">
-          <h1 class="w-full rounded-2xl font-title text-center text-[min(10vw,50px)] text-shadow-md text-mybrawon bg-mywhite" >about us</h1>
-          <div class=" w-full h-full flex flex-col justify-between items-start gap-4 p-6 rounded-2xl ">
-            <div class=" h-3/4 felx text-center md:text-start justify-between items-center gap-16">
-              <h1 class=" font-prg font-semibold text-[min(6vw,40px)] text-mywhite">what is Cafeccino ?</h1>
-              <span class="font-prg font-medium text-[min(3vw,19px)] text-mywhite">
+          <h1 class="w-full rounded-2xl font-title text-center text-[clamp(2rem,5vw,3rem)] text-shadow-md text-mybrawon bg-mywhite" >about us</h1>
+          <div class=" w-full h-full flex flex-col justify-start items-start gap-4 rounded-2xl ">
+            <div class="felx text-center md:text-start justify-center items-center">
+              <h1 class=" font-prg font-semibold text-[clamp(1.5rem,4vw,2.5rem)] text-mywhite">what is Cafeccino ?</h1>
+              <span class="font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
                 <p>Nestled in the heart of Al-Mokambo, right beside the familiar charm of Popeye, Cafeccino is more than just a coffee shop—it’s a sanctuary for those who crave warmth, connection, and a perfectly brewed cup. Whether you're escaping the noise of the city or meeting up with friends for a late-night laugh, Cafeccino offers a space that feels both familiar and refreshingly new.</p>
                 <p class="font-semibold">Coffee alone won’t fix your mood. A seat at Cafeccino will.</p>
               </span>
             </div>
-            <div class="h-1/4 felx text-center md:text-start justify-start items-center gap-4 py-6">
-              <h1 class="font-prg font-semibold text-[min(3vw,20px)] text-mywhite">Opening Hours :</h1>
-              <span class="font-prg font-medium text-[min(2vw,15px)] text-mywhite">
+            <div class="felx text-center md:text-start justify-center items-center">
+              <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite">Opening Hours :</h1>
+              <span class="font-prg font-medium text-[clamp(0.875rem,2vw,1rem)] text-mywhite">
                 <p class="font-semibold">Daily from 10:00 AM to 12:00 Midnight</p>
                 <p>Subject to slight changes during holidays or special events</p>
               </span>
@@ -91,6 +93,158 @@
       </main>
     </section>
     <!-- end about section -->
+    <!-- start services section -->
+    <a href="" id="services"></a>
+    <section class="md:h-1/2 h-3/4 flex flex-col md:justify-start justify-around items-center gap-8 bg-mywhite">
+        <h1 class="w-full pt-2 font-title text-[clamp(2rem,5vw,3rem)] text-center text-shadow-md text-mybrawon">our services</h1>
+        <div class="w-full flex flex-col md:flex-row justify-center items-center gap-4 px-8">
+          <span class="text-center text-mywhite font-prg p-6 flex flex-col gap-2 rounded-2xl bg-[linear-gradient(to_top,_#b07a50,_#d6a785)] shadow-md hover:scale-[1.05]">
+            <i class="fas fa-mug-hot text-[clamp(1.5rem,4vw,2.5rem)] text-mygold drop-shadow-2xl drop-shadow-amber-300"></i>
+            <h3 class="text-[clamp(1rem,2.5vw,1.25rem)] font-semibold">Pre-Order</h3>
+            <p class="text-[clamp(0.875rem,2vw,1rem)]">Order your drink online and pick it up ready—no lines, no delay.</p>
+          </span>
+          <span class="text-center text-mywhite font-prg p-6 flex flex-col gap-2 rounded-2xl bg-[linear-gradient(to_top,_#b07a50,_#d6a785)] shadow-md hover:scale-[1.05]">
+            <i class="fas fa-chair text-[clamp(1.5rem,4vw,2.5rem)] text-mygold drop-shadow-2xl drop-shadow-amber-300"></i>
+            <h3 class="text-[clamp(1rem,2.5vw,1.25rem)] font-semibold">Choose Your Spot</h3>
+            <p class="text-[clamp(0.875rem,2vw,1rem)]">Pick your seat based on your vibe—peaceful, scenic, or power-ready.</p>
+          </span>
+          <span class="text-center text-mywhite font-prg p-6 flex flex-col gap-2 rounded-2xl bg-[linear-gradient(to_top,_#b07a50,_#d6a785)] shadow-md hover:scale-[1.05]">
+            <i class="fas fa-music text-[clamp(1.5rem,4vw,2.5rem)] text-mygold drop-shadow-2xl drop-shadow-amber-300"></i>
+            <h3 class="text-[clamp(1rem,2.5vw,1.25rem)] font-semibold">Mood Playlist</h3>
+            <p class="text-[clamp(0.875rem,2vw,1rem)]">Tune into the café’s vibe with daily playlists that set the mood.</p>
+          </span>
+        </div>
+    </section>
+    <!-- end services section -->
+    <!-- start the menu -->
+    <a href="" id="menu"></a>
+    <section class=" relative w-full h-full flex md:justify-center justify-between bg-[linear-gradient(to_bottom_left,_#e2c3a3,_#975d37)]">
+      <main class="md:w-3/4 w-full h-full p-4 flex md:flex-row flex-col md:justify-around justify-between gap-4">
+        <main class="md:w-1/2 w-full h-1/2 p-4 flex flex-col gap-8 ">
+<div class=" flex flex-col gap-4">
+  <h1 class="font-prg font-semibold border-b-2 text-[clamp(1.5rem,4vw,2.5rem)] text-mywhite">
+    Hot Drinks <i class="fas fa-mug-hot"></i>
+  </h1>
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Arabic Coffee</h2>
+      <p>$2.50</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Classic Latte</h2>
+      <p>$3.00</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Mint Tea</h2>
+      <p>$2.00</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Rose Milk</h2>
+      <p>$2.75</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Hot Chocolate</h2>
+      <p>$3.25</p>
+    </div>
+  </div>
+</div>
+<div class="flex flex-col gap-4">
+  <h1 class="font-prg font-semibold border-b-2 text-[clamp(1.5rem,4vw,2.5rem)] text-mywhite">
+    Cold Drinks <i class="fas fa-glass-whiskey"></i>
+  </h1>
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Iced Latte</h2>
+      <p>$3.50</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Lemon Mint Cooler</h2>
+      <p>$2.75</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Spanish Iced Latte</h2>
+      <p>$4.00</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Peach Iced Tea</h2>
+      <p>$2.50</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Cold Brew</h2>
+      <p>$3.75</p>
+    </div>
+  </div>
+</div>
+</main>
+<main class="md:w-1/2 w-full h-1/2 p-4 flex flex-col gap-8">
+  <div class="flex flex-col gap-4">
+  <h1 class="font-prg font-semibold border-b-2 text-[clamp(1.5rem,4vw,2.5rem)] text-mywhite">
+    Sweets <i class="fas fa-cookie-bite"></i>
+  </h1>
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Date Cake</h2>
+      <p>$3.25</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Warm Brownie</h2>
+      <p>$2.75</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Strawberry Cheesecake</h2>
+      <p>$3.50</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Baklava Bites</h2>
+      <p>$2.25</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Lotus Tart</h2>
+      <p>$3.00</p>
+    </div>
+  </div>
+</div>
+<div class="md:flex hidden flex-col gap-4">
+  <h1 class="font-prg font-semibold border-b-2 text-[clamp(1.5rem,4vw,2.5rem)] text-mywhite">
+    Light Bites <i class="fas fa-bread-slice"></i>
+  </h1>
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Mini Halloumi Sandwich</h2>
+      <p>$3.00</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Za'atar Croissant</h2>
+      <p>$2.75</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Avocado Bites</h2>
+      <p>$3.25</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Cheddar Melt</h2>
+      <p>$3.50</p>
+    </div>
+    <div class="flex justify-between font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+      <h2>Mini Chicken Wrap</h2>
+      <p>$3.75</p>
+    </div>
+  </div>
+</div>
+</main>
+      </main>
+      <div class=" overflow-hidden md:w-1/4 w-1/2 md:h-full h-3/4 flex flex-col items-center justify-start gap-8 ">
+        <div class="w-3/4 h-4/5 px-4 pb-4 flex justify-between items-center flex-col rounded-b-full bg-[url('css/sourecs/images/menu/bg-cafe.jpg')]">
+          <h1 class="w-full h-1/2 pt-4 text-center font-title text-[clamp(2rem,5vw,3rem)] text-shadow-md text-mybrawon bg-mywhite rounded-b-full" >the <br> menu</h1>
+          <div class="overflow-hidden border-4 border-amber-50 rounded-full animation-up-down">
+            <img src="css/sourecs/images/menu/cup.jpg" alt="">
+          </div>
+        </div>
+        <a class="w-1/2 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">all menu</a>
+      </div>
+      
+    </section>
+    <!-- end the menu -->
   </body>
   <script src="js/script.js"></script>
 </html>
