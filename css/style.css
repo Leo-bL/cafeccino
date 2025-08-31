@@ -9,9 +9,6 @@ body{
 body::-webkit-scrollbar{
     width: 8px;
 }
-body::-webkit-scrollbar-track{
-    background:  radial-gradient(circle,#e2c3a3,#975d37);
-}
 body::-webkit-scrollbar-thumb{
     background-color: #f8f8f8;
     border-radius: 4px;
@@ -24,14 +21,15 @@ body::-webkit-scrollbar-thumb{
     font-family:'showclick' ;
     src: url(sourecs/fonts/showclick/Showclick.ttf);
 }
+[x-cloak] { display: none !important; }
 @layer utilities {
     /* my bg-color */
-    .bg-myblack{ background-color: #131213; }
+    .bg-myblack{ background-color: #3B2F2F; }
     .bg-mybrawon{ background-color: #975d37; }
-    .bg-mywhite{ background-color: #fdf4ee; }
-    .bg-mygold{ background-color: #ecc836; }
+    .bg-mywhite{ background-color: #F5F0E6; }
+    .bg-mygold{ background-color: #ffcf10; }
     /* my text-color */
-    .text-myblack{ color: #131213; }
+    .text-myblack{ color: #6B4F3B; }
     .text-mybrawon{ color: #975d37; }
     .text-mywhite{ color: #f8f8f8; }
     .text-mygold { color: #ffcf10; }
@@ -57,7 +55,7 @@ body::-webkit-scrollbar-thumb{
         translate: 0 0;
     }
     50%{
-        translate: 0 2%;
+        translate: 0 3%;
     }
 }
 @keyframes open-up {

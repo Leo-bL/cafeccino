@@ -4,11 +4,10 @@ const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
-        navbar.style.translate = " 0 -100%";
-        the_menu.style.translate = " 0 -100%";
+        navbar.style.translate = " 0 -125%";
     } else {
         navbar.style.translate = "0 0";
-        the_menu.style.translate = "0 0";
+        
     }
     lastScrollY = window.scrollY;
 });
@@ -22,11 +21,11 @@ btn_menu.onclick = function(){
     bars[1].classList.toggle('-translate-y-[150%]');
     bars[0].classList.toggle('rotate-45');
     bars[1].classList.toggle('-rotate-45');
-    the_menu.classList.toggle('mt-[20%]');
+    the_menu.classList.toggle('mt-[100%]');
     setTimeout(() => {
-        the_menu.classList.toggle('h-[200%]');
+        the_menu.classList.toggle('h-[600%]');
         
-    }, 100);
+    }, 200);
     setTimeout(() => {
         for (let i = 0; i < links.length; i++) {
             links[i].classList.toggle('hidden')
