@@ -1,4 +1,34 @@
 
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+const swiperContainer = document.querySelector('.swiper');
+
+swiperContainer.addEventListener('mouseenter', () => {
+    swiper.autoplay.stop();
+});
+
+swiperContainer.addEventListener('mouseleave', () => {
+    swiper.autoplay.start();
+});
+
+
 let lastScrollY = window.scrollY;
 const navbar = document.getElementById("navbar");
 

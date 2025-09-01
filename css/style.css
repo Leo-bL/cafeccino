@@ -13,6 +13,34 @@ body::-webkit-scrollbar-thumb{
     background-color: #f8f8f8;
     border-radius: 4px;
 }
+/* siwper librry */
+.swiper-button-prev,.swiper-button-next {
+    color: #f8f8f8;
+}
+.swiper-pagination-bullet {
+    background-color: #f8f8f8; 
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #f8f8f8; 
+    opacity: 1;
+}
+.swiper-slide {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide-active {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05); 
+    z-index: 2;
+}
+.swiper-slide-active:hover{
+    scale: 1.05;
+}
 @font-face {
     font-family:'fredoka';
     src: url(sourecs/fonts/fredoka/Fredoka-VariableFont_wdth\,wght.ttf);

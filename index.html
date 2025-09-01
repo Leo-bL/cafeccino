@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="icon" sizes="32x32" href="css/sourecs/images/about/cafe-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Cafeccino</title>
@@ -26,6 +28,7 @@
               <li class="hover:scale-[1.1]"><a href="#services">Services</a></li>
               <li class="hover:scale-[1.1]"><a href="#menu">Menu</a></li>
               <li class="hover:scale-[1.1]"><a href="#prodects">Products</a></li>
+              <li class="hover:scale-[1.1]"><a href="#gallery">Gallery</a></li>
               <li class="hover:scale-[1.1]"><a href="#location">Location</a></li>
               <li class="hover:scale-[1.1]"><a href="#contact">Contact</a></li>
             </ul>
@@ -38,7 +41,7 @@
           </button>
           <!-- end mobile menu -->
       </nav>
-      <a class="md:block hidden w-1/12 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">log in <i class="fas fa-sign-in-alt"></i></a>
+      <a class="md:block hidden w-1/12 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">log in <i class="fas fa-sign-in-alt ml-2"></i></a>
       <div class="the-menu md:hidden -mt-36 w-2/3 h-0 flex justify-center items-center p-4 rounded-2xl overflow-hidden absolute bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 shadow-[0_0_0_1.2px_rgba(255,255,255,0.25)] backdrop-blur-[4px] animation-open-up ">
             <ul  class="flex flex-col gap-2 text-center text-[clamp(1.5rem,4vw,2.5rem)] font-title text-mywhite font-semibold ">
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#about">About</a></li class="link">
@@ -46,8 +49,9 @@
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#menu">Menu</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#prodects">Products</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#location">Location</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#gallery">Gallery</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#conetact">Contact</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1] border-t-2 px-14 pt-2"><a href="">log in</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1] text-myblack bg-mywhite py-2 px-4 rounded-2xl animation-glow"><a href="">log in<i class="fas fa-sign-in-alt ml-2"></i></a></li>
             </ul>
           </div>
     </header>
@@ -484,6 +488,27 @@
   <a class="w-1/2 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">all Products <i class="fa-solid fa-arrow-right"></i></a>
     </section>
     <!-- end prodects -->
+    <!-- start gallery -->
+    <a href="" id="gallery"></a>
+    <section class="w-full md:h-full h-1/2 p-8 flex flex-col items-center gap-4">
+      <h1 class="w-3/4 pt-1 font-title text-[clamp(2rem,5vw,3rem)] text-center text-shadow-md text-myblack rounded-2xl bg-mywhite">our Gallery</h1>
+      <h1 class="font-semibold font-prg text-mywhite text-[clamp(1.5rem,4vw,2.5rem)]">Come and take some memories</h1>
+      <div class="swiper w-full h-full rounded-lg overflow-hidden">
+  <div class="swiper-wrapper ">
+    <div class="swiper-slide"><img src="css/sourecs/images/gallery/one.jpg" class="w-full h-full object-cover rounded-2xl" /></div>
+    <div class="swiper-slide"><img src="css/sourecs/images/gallery/two.jpg" class="w-full h-full object-cover rounded-2xl" /></div>
+    <div class="swiper-slide"><img src="css/sourecs/images/gallery/three.jpg" class="w-full h-full object-cover rounded-2xl" /></div>
+    <div class="swiper-slide"><img src="css/sourecs/images/gallery/four.jpg" class="w-full h-full object-cover rounded-2xl" /></div>
+    <div class="swiper-slide"><img src="css/sourecs/images/gallery/five.jpg" class="w-full h-full object-cover rounded-2xl" /></div>
+  </div>
+
+  <!-- أزرار التنقل -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+</div>
+    </section>
+    <!-- end gallery -->
     <!-- start location -->
     <a href="" id="location"></a>
     <section class="relative w-full h-full p-8 flex flex-col items-center">
@@ -497,8 +522,6 @@
           <span class="md:block hidden font-prg text-[clamp(0.875rem,2vw,1rem)] text-mywhite">
             <p><i class="fas fa-map-marker-alt mr-2"></i><span class="font-semibold">Address:</span> Jameelea Street – across from the Syrian Post Office</p>
             <p class="font-semibold"> <i class="fas fa-parking mr-2"></i>Parking available</p>
-            <p><span class="font-semibold"><i class="fas fa-phone-alt mr-2"></i>Contact us:</span> +963 21 555 1234</p>
-            <p><i class="fas fa-envelope mr-2"></i><span class="font-semibold">Email: </span>hello@Cafeccino.cafe</p>
           </span>
           <a class="w-1/2 md:self-start self-center py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">Book now <i class="fas fa-calendar-alt ml-2"></i></a>
         </div>
@@ -506,10 +529,59 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12877.129610968776!2d37.16173396228642!3d36.208330283500345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ff8144f7e0529%3A0x547e95026824f62a!2z2KfZhNis2YXZitmE2YrYqdiMINit2YTYqNiMINiz2YjYsdmK2Kc!5e0!3m2!1sar!2s!4v1756502440881!5m2!1sar!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-3/4 h-3/4 shadow-[10px_-10px_0_#F5F0E6] border-r-2 border-t-2 border-amber-50 rounded-2xl"></iframe>
         </div>
       </main>
+    </section>
+    <!-- end location -->
+    <!-- start contact -->
+    <a href="" id="contact"></a>
+    <section class="relative w-full h-full flex justify-center items-center flex-wrap md:pb-0 pb-16">
+      <h1 class="w-3/4 pt-1 font-title text-[clamp(2rem,5vw,3rem)] text-center text-shadow-md text-myblack rounded-2xl bg-mywhite">contact</h1>
+      <main class="md:w-1/2 w-full h-full p-8 flex justify-center md:items-start items-center md:mb-0 mb-8">
+        <div class="w-full md:h-4/5 h-1/2 p-4 rounded-2xl flex flex-wrap bg-mywhite">
+          <span class="w-1/2 h-1/4 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-myblack">
+            <h1 class="p-2">Name:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 border-neutral-300 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="i'm elegant">
+          </span>
+          <span class="w-1/2 h-1/4 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-myblack">
+            <h1 class="p-2">Email:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 border-neutral-300 bg-neutral-200 outline-neutral-400" type="email" name="" id="" placeholder="the.elegant.one@gmail.com">
+          </span>
+          <span class="w-full h-1/2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-myblack">
+            <h1 class="p-2">Leave a massage:</h1>
+            <textarea class="w-full h-3/4 px-2 rounded-2xl border-2 border-neutral-300 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="i love your cafe <3"></textarea>
+          </span>
+          <a class="w-full md:self-start self-center py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite bg-myblack rounded-2xl hover:scale-[1.02]" href="">send<i class="fas fa-paper-plane ml-2"></i></a>
+        </div>
+      </main>
+      <main class="md:static absolute md:w-1/2 w-full h-full md:pt-0 pt-16 md:block flex flex-col justify-between">
+        <span class="w-full md:h-1/2 h-1/4 flex flex-col justify-center md:items-start items-center font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+          <h1 class="font-semibold text-[clamp(1.5rem,4vw,2.5rem)]">Share Your Moment With Us</h1>
+          <p class="md:block hidden">Every visit to our café is a story, and your words help us write the next chapter. If you enjoyed the coffee, the cozy atmosphere, or simply have a suggestion—we’d love to hear it. Leave us a review or a little message. Your voice helps us grow and keep the warmth you love alive. Thank you for being part of our journey</p>
+          <p class="block md:hidden text-center px-4">Enjoyed your time with us? Leave a quick review or message—your words help us keep the cozy vibes going. Thank you</p>
+        </span>
+        <span class="w-full h-1/4 flex flex-col justify-center md:items-start items-center font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+          <p><span class="font-semibold"><i class="fas fa-phone-alt mr-2"></i>Contact us:</span> 0921555123</p>
+          <p><i class="fas fa-envelope mr-2"></i><span class="font-semibold">Email: </span>hello@Cafeccino.cafe</p>
+          <p class="pt-4 font-prg font-semibold">follow us:</p>
+          <span class="py-4 flex items-center gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+            <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-white text-mywhite hover:text-neutral-800 transition-all duration-200">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-white text-mywhite hover:text-neutral-800 transition-all duration-200">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-white text-mywhite hover:text-neutral-800 transition-all duration-200">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-white text-mywhite hover:text-neutral-800 transition-all duration-200">
+              <i class="fab fa-x-twitter"></i>
+          </a>
+          </span>
+        </span>
+      </main>
       <img class="absolute bottom-0 right-0 w-[5%]" src="css/sourecs/images/corner/corner-bl.png" alt="">
       <img class="absolute bottom-0 left-0 w-[5%]" src="css/sourecs/images/corner/corner-br.png" alt="">
     </section>
-    <!-- end location -->
+    <!-- end contact -->
     <!-- start footer -->
     <footer class="w-full md:h-1/2 h-full flex md:flex-row flex-col md:flex-wrap flex-nowrap justify-center px-4 pt-8 bg-mywhite">
       <div class="md:w-1/4 w-full md:h-5/6 h-1/4">
@@ -570,4 +642,5 @@
     <!-- end footer -->
   </body>
   <script src="js/script.js"></script>
+
 </html>
