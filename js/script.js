@@ -1,4 +1,22 @@
-
+// start modal
+function openModal(id) {
+    const modal = document.getElementById(id);
+    const content = modal.querySelector('div');
+    modal.classList.remove('hidden');
+    content.classList.remove('animate-fade-out');
+    content.classList.add('animate-fade-in');
+}
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    const content = modal.querySelector('div');
+    content.classList.remove('animate-fade-in');
+    content.classList.add('animate-fade-out');
+    setTimeout(() => {
+    modal.classList.add('hidden');
+    }, 300);
+}
+// end modal
+// start swaper librry
 const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 2,
@@ -27,17 +45,14 @@ swiperContainer.addEventListener('mouseenter', () => {
 swiperContainer.addEventListener('mouseleave', () => {
     swiper.autoplay.start();
 });
-
-
+// end swaper librry
 let lastScrollY = window.scrollY;
 const navbar = document.getElementById("navbar");
-
 window.addEventListener("scroll", () => {
     if (window.scrollY > lastScrollY) {
         navbar.style.translate = " 0 -125%";
     } else {
         navbar.style.translate = "0 0";
-        
     }
     lastScrollY = window.scrollY;
 });
@@ -76,7 +91,6 @@ window.onload = function () {
         beans.classList.remove('animation-open-up');
     }, 1500);
 }
-
 let indexia = 0;
 const caption = document.getElementById('caption');
 let caption_array = ['A cup, a moment, a life.',' is the first of all','it`s the best part of waking up ']

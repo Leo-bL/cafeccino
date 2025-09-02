@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="icon" sizes="32x32" href="css/sourecs/images/about/cafe-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -41,17 +41,18 @@
           </button>
           <!-- end mobile menu -->
       </nav>
-      <a class="md:block hidden w-1/12 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">log in <i class="fas fa-sign-in-alt ml-2"></i></a>
+      
+      <button onclick="openModal('modal-log')" class="md:block hidden cursor-pointer w-1/12 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow">log in <i class="fas fa-sign-in-alt ml-2"></i></button>
       <div class="the-menu md:hidden -mt-36 w-2/3 h-0 flex justify-center items-center p-4 rounded-2xl overflow-hidden absolute bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 shadow-[0_0_0_1.2px_rgba(255,255,255,0.25)] backdrop-blur-[4px] animation-open-up ">
             <ul  class="flex flex-col gap-2 text-center text-[clamp(1.5rem,4vw,2.5rem)] font-title text-mywhite font-semibold ">
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#about">About</a></li class="link">
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#services">Services</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#menu">Menu</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#prodects">Products</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#location">Location</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#gallery">Gallery</a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#location">Location</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#conetact">Contact</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1] text-myblack bg-mywhite py-2 px-4 rounded-2xl animation-glow"><a href="">log in<i class="fas fa-sign-in-alt ml-2"></i></a></li>
+              <li class="link hidden opacity-0 hover:scale-[1.1] text-myblack bg-mywhite py-2 px-4 rounded-2xl animation-glow"><button onclick="openModal('modal-log')">log in <i class="fas fa-sign-in-alt ml-2"></i></button>li>
             </ul>
           </div>
     </header>
@@ -640,6 +641,50 @@
       </span>
     </footer>
     <!-- end footer -->
+    <!-- start all modals-->
+    <!-- start log in modal -->
+    <div id="modal-log" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+      <label onclick="closeModal('modal-log')" class="absolute w-full h-full"></label>
+      <div id="modalContent" class="relative md:w-2/5 w-3/4 md:h-11/12 h-1/2 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+        <button onclick="closeModal('modal-log')" class="cursor-pointer bg-brown-600 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite px-4 py-2 rounded">
+          <i class="fas fa-xmark text-xl"></i>
+        </button>
+        <span class="absolute top-0 right-0 w-1/2 h-1/6 flex justify-around items-center font-title font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-center text-mywhite">
+          <button class="border-b-2 cursor-pointer p-1 hover:scale-[1.05]">Sign in</button>
+          <button class="border-b-2 cursor-pointer p-1 hover:scale-[1.05]">Sign up</button>
+        </span>
+        <main class="w-full h-11/12 flex flex-col justify-center items-center gap-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+          <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)]">welcome back</h1>
+          <span class="w-full h-1/5 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+            <h1 class="p-2">Email:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="email" name="" id="" placeholder="the.elegant.one@gmail.com">
+          </span>
+          <span class="w-full h-1/5 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+            <h1 class="p-2">Password:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="password" name="" id="" placeholder="elegant1_oNe$">
+          </span>
+          <span class="px-6 w-full" ><input class="mr-2" type="checkbox" name="" id="">Remember me</span>
+          <a class="w-11/12 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.02]" href="">Submit<i class="fas fas fa-arrow-right-to-bracket ml-2"></i></a>
+          <a class="w-11/12 py-2 border-t-2 font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite hover:text-shadow-md hover:text-shadow-amber-50" href="">Forget your password ?</a>
+        </main>
+      </div>
+    </div>
+    <!-- end log in modal -->
+    <!-- start book modal -->
+    <div id="modal-book" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+      <label onclick="closeModal('modal-book')" class="absolute w-full h-full"></label>
+      <div id="modalContent" class="w-1/2 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+        <button onclick="closeModal('modal-book')" class="cursor-pointer bg-brown-600 text-mywhite px-4 py-2 rounded">
+          <i class="fas fa-xmark text-xl"></i>
+        </button>
+        <span>
+
+        </span>
+      </div>
+    </div>
+    <!-- end book modal -->
+    <!-- start all modals-->
+    
   </body>
   <script src="js/script.js"></script>
 
