@@ -5,6 +5,7 @@
 }
 body{
     height: 100vh;
+    overflow: hidden;
 }
 body::-webkit-scrollbar{
     width: 8px;
@@ -12,6 +13,12 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background-color: #f8f8f8;
     border-radius: 4px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 /*start siwper librry */
 .swiper-button-prev,.swiper-button-next {
@@ -72,6 +79,9 @@ body::-webkit-scrollbar-thumb{
     .animation-open-up{
         animation: open-up 1s;
     }
+    .animation-open-down{
+        animation: open-down 1s;
+    }
     .animation-repeat{
         animation: repeat-move 40s linear infinite;
     }
@@ -101,6 +111,22 @@ body::-webkit-scrollbar-thumb{
     100%{
         translate: 0 0 ;
         opacity: 1;
+    }
+}
+@keyframes open-down {
+    0%{
+        translate: 0 -100%;
+        opacity: 0;
+    }
+    50%{
+        translate: 0 0 ;
+        opacity: 1;
+    }
+    75%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
     }
 }
 @keyframes repeat-move {

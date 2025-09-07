@@ -13,7 +13,23 @@
     <link rel="stylesheet" href="css/media.css">
     <title>Cafeccino</title>
   </head>
-  <body class="bg-myblack">
+  <body id="body" class="bg-myblack">
+    <!-- start loding -->
+    <main id="loading-screen" class="fixed inset-0 z-50 flex flex-col justify-center items-center backdrop-blur-sm bg-[radial-gradient(circle,_rgba(59,47,47,0.75),_rgba(59,47,47))]">
+      <img class="absolute w-3/4 animation-up-down -z-10" src="css/sourecs/images/hero-section/front-beans.png" alt="">
+      <div class="overflow-hidden animation-open-down">
+        <img class="w-full max-w-[clamp(200px,40vw,320px)] h-auto" src="css/sourecs/images/navgation/cafe-logo.png" alt="Café Logo">
+      </div>
+      <span class="flex justify-center items-center gap-4 text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite font-semibold font-prg animation-open-up">
+        <p>loading</p>
+        <div class="flex flex-row gap-2">
+          <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce"></div>
+          <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce [animation-delay:-.3s]"></div>
+          <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce [animation-delay:-.5s]"></div>
+        </div>
+      </span>
+    </main>
+    <!-- end loding -->
     <!-- start navbar -->
     <a id="top" href=""></a>
     <header id="navbar" class="fixed w-full h-1/12 z-50 mt-4 flex justify-around items-center gap-8">
@@ -52,7 +68,7 @@
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#gallery">Gallery</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#location">Location</a></li>
               <li class="link hidden opacity-0 hover:scale-[1.1]"><a href="#conetact">Contact</a></li>
-              <li class="link hidden opacity-0 hover:scale-[1.1] text-myblack bg-mywhite py-2 px-4 rounded-2xl animation-glow"><button onclick="openModal('modal-log')">log in <i class="fas fa-sign-in-alt ml-2"></i></button>li>
+              <li class="link hidden opacity-0 hover:scale-[1.1] text-myblack bg-mywhite py-2 px-4 rounded-2xl animation-glow"><button onclick="openModal('modal-log')">log in <i class="fas fa-sign-in-alt ml-2"></i></button></li>
             </ul>
           </div>
     </header>
@@ -524,7 +540,7 @@
             <p><i class="fas fa-map-marker-alt mr-2"></i><span class="font-semibold">Address:</span> Jameelea Street – across from the Syrian Post Office</p>
             <p class="font-semibold"> <i class="fas fa-parking mr-2"></i>Parking available</p>
           </span>
-          <a class="w-1/2 md:self-start self-center py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">Book now <i class="fas fa-calendar-alt ml-2"></i></a>
+          <button onclick="openModal('modal-book')" class="cursor-pointer w-1/2 md:self-start self-center py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow">Reserve a table<i class="fas fa-calendar-alt ml-2"></i></button>
         </div>
         <div class="md:static absolute md:w-1/2 w-full md:h-full h-3/4 flex justify-center items-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12877.129610968776!2d37.16173396228642!3d36.208330283500345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ff8144f7e0529%3A0x547e95026824f62a!2z2KfZhNis2YXZitmE2YrYqdiMINit2YTYqNiMINiz2YjYsdmK2Kc!5e0!3m2!1sar!2s!4v1756502440881!5m2!1sar!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-3/4 h-3/4 shadow-[10px_-10px_0_#F5F0E6] border-r-2 border-t-2 border-amber-50 rounded-2xl"></iframe>
@@ -633,7 +649,7 @@
         </span>
         <span class="w-full h-1/2 pt-4 flex flex-col justify-center items-center gap-5">
           <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">Be our customer</p>
-          <a class="w-3/4 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite bg-myblack rounded-2xl hover:scale-[1.05] animation-glow" href="">log in <i class="fas fa-sign-in-alt"></i></a>
+          <button onclick="openModal('modal-log')" class="w-3/4 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite bg-myblack rounded-2xl hover:scale-[1.05] animation-glow">log in <i class="fas fa-sign-in-alt"></i></button>
         </span>
       </div>
       <span class="w-full md:h-1/6 h-1/12 flex justify-center items-center rounded-t-2xl font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite bg-myblack">
@@ -645,15 +661,15 @@
     <!-- start log in modal -->
     <div id="modal-log" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
       <label onclick="closeModal('modal-log')" class="absolute w-full h-full"></label>
-      <div id="modalContent" class="relative md:w-2/5 w-3/4 md:h-11/12 h-1/2 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+      <div id="modalContent" class="relative md:w-2/5 w-11/12 md:h-11/12 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
         <button onclick="closeModal('modal-log')" class="cursor-pointer bg-brown-600 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite px-4 py-2 rounded">
           <i class="fas fa-xmark text-xl"></i>
         </button>
-        <span class="absolute top-0 right-0 w-1/2 h-1/6 flex justify-around items-center font-title font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-center text-mywhite">
-          <button class="border-b-2 cursor-pointer p-1 hover:scale-[1.05]">Sign in</button>
-          <button class="border-b-2 cursor-pointer p-1 hover:scale-[1.05]">Sign up</button>
+        <span class="absolute top-0 right-0 w-1/2 h-1/6 flex justify-center items-center gap-4 font-title font-semibold text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite">
+          <button id="sign-in" class="border-2 rounded-full cursor-pointer py-1 px-4 hover:scale-[1.05] bg-mywhite text-myblack">Sign in</button>
+          <button id="sign-up" class="border-2 rounded-full cursor-pointer py-1 px-4 hover:scale-[1.05]">Sign up</button>
         </span>
-        <main class="w-full h-11/12 flex flex-col justify-center items-center gap-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+        <main id="sign-in-filed" class="w-full h-11/12 flex flex-col justify-center items-center gap-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
           <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)]">welcome back</h1>
           <span class="w-full h-1/5 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
             <h1 class="p-2">Email:</h1>
@@ -667,24 +683,81 @@
           <a class="w-11/12 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.02]" href="">Submit<i class="fas fas fa-arrow-right-to-bracket ml-2"></i></a>
           <a class="w-11/12 py-2 border-t-2 font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite hover:text-shadow-md hover:text-shadow-amber-50" href="">Forget your password ?</a>
         </main>
+        <!-- sign up -->
+        <main id="sign-up-filed" class=" w-full h-11/12 flex flex-col justify-center items-center gap-1 hidden opacity-0 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite">
+          <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)]">welcome to your second home</h1>
+          <div class="w-full h-1/6 flex justify-center items-center gap-2 ">
+            <span class="w-1/2 h-full px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">First name:</h1>
+              <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="leonardo">
+            </span>
+            <span class="w-1/2 h-full px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">Last name:</h1>
+              <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="the elegant">
+            </span>
+          </div>
+          <span class="w-full h-1/6 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+            <h1 class="p-1">Email:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="email" name="" id="" placeholder="the.elegant.one@gmail.com">
+          </span>
+          <span class="w-full h-1/6 px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+            <h1 class="p-1">Password:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="password" name="" id="" placeholder="elegant1_oNe$">
+          </span>
+          <span class="w-full h-1/6 px-4 mb-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+            <h1 class="p-1">Comfort Password:</h1>
+            <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="password" name="" id="" placeholder="elegant1_oNe$">
+          </span>
+          <a class="w-11/12 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.02]" href="">Submit<i class="fas fas fa-arrow-right-to-bracket ml-2"></i></a>
+        </main>
       </div>
     </div>
     <!-- end log in modal -->
     <!-- start book modal -->
     <div id="modal-book" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
       <label onclick="closeModal('modal-book')" class="absolute w-full h-full"></label>
-      <div id="modalContent" class="w-1/2 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+      <div id="modalContent" class="md:w-3/5 w-11/12 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
         <button onclick="closeModal('modal-book')" class="cursor-pointer bg-brown-600 text-mywhite px-4 py-2 rounded">
           <i class="fas fa-xmark text-xl"></i>
         </button>
-        <span>
-
-        </span>
+        <main class="w-full h-full flex flex-col justify-center items-center text-mywhite gap-2 md:px-8 px-2">
+          <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)]">Pick Your Spot Before It’s Gone</h1>
+          <div class="w-full h-1/4 flex md:flex-row flex-col justify-center items-center gap-2 ">
+            <span class="md:w-1/2 w-full h-full md:px-4 px-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">name:</h1>
+              <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="leonardo">
+            </span>
+            <span class="md:w-1/2 w-full h-full md:px-4 px-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">phone number:</h1>
+              <input class="w-full h-1/2 px-2 rounded-2xl border-2 text-myblack border-neutral-500 bg-neutral-200 outline-neutral-400" type="tel" name="" id="" placeholder="09*********">
+            </span>
+          </div>
+          <div class="w-full h-1/4 flex md:flex-row flex-col justify-center items-center gap-1 md:my-0 my-6">
+            <span class="md:w-2/6 w-11/12 h-full md:px-4 px-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">Person:</h1>
+              <input type="number" name="guests" min="1" max="20" value="1" class="w-full px-3 py-2 rounded border border-brown-300 text-brown-800 focus:outline-none focus:ring-2 focus:ring-brown-500">
+            </span>
+            <span class="md:w-2/6 w-11/12 h-full md:px-4 px-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">Date:</h1>
+              <input type="date" name="booking-date" class="w-full px-3 py-2 rounded border border-brown-300 text-mywhite focus:outline-none focus:ring-2 focus:ring-brown-500">
+            </span>
+            <span class="md:w-2/6 w-11/12 h-full md:px-4 px-2 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)]">
+              <h1 class="p-1">Time:</h1>
+              <input type="time" name="booking-time" class="w-full px-3 py-2 rounded border border-brown-300 text-brown-800 focus:outline-none focus:ring-2 focus:ring-brown-500">
+            </span>
+          </div>
+          <div class="w-full h-1/4 flex justify-center items-center">
+            <span class="w-full h-full px-4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-mywhite">
+            <h1 class="p-1">Massage:</h1>
+            <textarea class="w-full h-1/2 px-2 text-myblack rounded-2xl border-2 border-neutral-300 bg-neutral-200 outline-neutral-400" type="text" name="" id="" placeholder="I want a place next to you <3"></textarea>
+          </span>
+          </div>
+          <a class="w-11/12 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.02]" href="">Submit<i class="fas fas fa-arrow-right-to-bracket ml-2"></i></a>
+        </main>
       </div>
     </div>
     <!-- end book modal -->
-    <!-- start all modals-->
-    
+    <!-- end all modals-->
   </body>
   <script src="js/script.js"></script>
 

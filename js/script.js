@@ -15,6 +15,44 @@ function closeModal(id) {
     modal.classList.add('hidden');
     }, 300);
 }
+const sign_up = document.getElementById('sign-up');
+const sign_in = document.getElementById('sign-in');
+const sign_up_filed = document.getElementById('sign-up-filed');
+const sign_in_filed = document.getElementById('sign-in-filed');
+// start sign up
+sign_up.onclick = function(){
+    sign_in.classList.remove('bg-mywhite');
+    sign_in.classList.remove('text-myblack');
+    sign_up.classList.add('bg-mywhite');
+    sign_up.classList.add('text-myblack');
+
+    sign_in_filed.classList.add('opacity-0');
+    setTimeout(() => {
+        sign_in_filed.classList.add('hidden');
+        sign_up_filed.classList.remove('hidden');
+    setTimeout(() => {
+        sign_up_filed.classList.remove('opacity-0');
+    }, 50);
+    }, 500);
+}
+// end sign up
+// start sign in
+sign_in.onclick = function(){
+    sign_up.classList.remove('bg-mywhite');
+    sign_up.classList.remove('text-myblack');
+    sign_in.classList.add('bg-mywhite');
+    sign_in.classList.add('text-myblack');
+
+    sign_up_filed.classList.add('opacity-0');
+    setTimeout(() => {
+        sign_up_filed.classList.add('hidden');
+        sign_in_filed.classList.remove('hidden');
+    setTimeout(() => {
+        sign_in_filed.classList.remove('opacity-0');
+    }, 50);
+    }, 500);
+}
+// end sign in
 // end modal
 // start swaper librry
 const swiper = new Swiper('.swiper', {
@@ -56,7 +94,18 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY;
 });
-
+// start loding
+const loading = document.getElementById('loading-screen');
+const body = document.getElementById('body')
+window.onload = function () {
+    loading.classList.add('opacity-0');
+    setTimeout(() => {
+        loading.classList.add('hidden');
+        body.style.overflow = `auto`
+    }, 500);
+}
+    
+// end loading 
 const btn_menu = document.getElementById('b-menu');
 const bars = document.querySelectorAll('.bar')
 const the_menu = document.querySelector('.the-menu');
@@ -84,12 +133,6 @@ btn_menu.onclick = function(){
 for (let i = 0; i < links.length; i++) {
     links[i].onclick = () => btn_menu.click();
     
-}
-const beans = document.getElementById('beans');
-window.onload = function () {
-    setTimeout(() => {
-        beans.classList.remove('animation-open-up');
-    }, 1500);
 }
 let indexia = 0;
 const caption = document.getElementById('caption');
