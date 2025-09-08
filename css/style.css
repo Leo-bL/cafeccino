@@ -94,6 +94,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .animate-fade-out {
     animation: fade-out 0.3s ease-in forwards;
     }
+    .animation-spin{
+        animation: spin 80s infinite;
+    }
 }
 @keyframes up-down {
     0%,100%{
@@ -154,4 +157,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 @keyframes fade-out {
     from { opacity: 1; transform: scale(1); }
     to { opacity: 0; transform: scale(0.9); }
+}
+@keyframes spin {
+    to{rotate: 360deg;}
 }

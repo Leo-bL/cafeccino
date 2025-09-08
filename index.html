@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
     <title>Cafeccino</title>
   </head>
   <body id="body" class="bg-myblack">
@@ -122,7 +121,7 @@
             <div class="felx text-center md:text-start justify-center items-center">
               <h1 class="font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite">Opening Hours :</h1>
               <span class="font-prg font-medium text-[clamp(0.875rem,2vw,1rem)] text-mywhite">
-                <p class="font-semibold">Daily from 10:00 AM to 12:00 Midnight</p>
+                <p class="font-semibold">Daily from 9:00 AM to 12:00 Midnight</p>
                 <p>Subject to slight changes during holidays or special events</p>
               </span>
             </div>
@@ -245,7 +244,7 @@
     </div>
   </div>
 </div>
-<a class="md:hidden block self-center w-1/2 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">all menu<i class="fas fa-concierge-bell ml-2"></i></a>
+<a class="md:hidden block self-center w-1/2 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="html/the menu.html">all menu<i class="fas fa-concierge-bell ml-2"></i></a>
 </main>
 <main class="md:w-1/2 w-full h-1/2 p-4 flex flex-col gap-8">
   <div class="md:flex hidden flex-col gap-4">
@@ -313,7 +312,7 @@
           </div>
         <img class="absolute top-0 right-[1%] w-1/6" src="css/sourecs/images/corner/corner-tr.png" alt="">
         </div>
-        <a class="w-1/2 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">all menu<i class="fas fa-concierge-bell ml-2"></i></a>
+        <a class="w-1/2 py-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="html/the menu.html">all menu<i class="fas fa-concierge-bell ml-2"></i></a>
       </div>
       
     </section>
@@ -324,7 +323,6 @@
       <h1 class="w-3/4 rounded-2xl font-title text-center text-[clamp(2rem,5vw,3rem)] text-shadow-md text-myblack bg-mywhite">
         our products
       </h1>
-
   <!-- الفلاتر -->
   <div class="relative w-1/2 p-4 flex gap-4 justify-center bg-mywhite rounded-b-3xl">
     <img class="absolute top-0 -left-1/12 w-1/12" src="css/sourecs/images/corner/corner-tl.png" alt="">
@@ -339,10 +337,8 @@
     </button>
     <img class="absolute top-0 -right-1/12 w-1/12" src="css/sourecs/images/corner/corner-tr.png" alt="">
   </div>
-
   <!-- الأقسام -->
   <main class="relative w-full h-full flex justify-center items-center">
-
     <!-- قسم المشروبات الباردة -->
     <div x-show="type === 'iced'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class="w-full h-full flex justify-center items-center absolute">
       <div class="w-full h-full grid md:grid-cols-4 grid-cols-2 gap-4 p-4">
@@ -395,7 +391,6 @@
         </div>
       </div>
     </div>
-
     <!-- قسم العصير -->
     <div x-show="type === 'juice'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class="w-full h-full flex justify-center items-center absolute">
       <div class="w-full h-full grid md:grid-cols-4 grid-cols-2 gap-4 p-4">
@@ -500,7 +495,6 @@
         </div>
       </div>
     </div>
-
   </main>
   <a class="w-1/2 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite rounded-2xl hover:scale-[1.05] animation-glow" href="">all Products <i class="fa-solid fa-arrow-right"></i></a>
     </section>
@@ -760,5 +754,4 @@
     <!-- end all modals-->
   </body>
   <script src="js/script.js"></script>
-
 </html>
