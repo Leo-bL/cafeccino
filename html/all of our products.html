@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" sizes="32x32" href="../css/sourecs/images/about/cafe-logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>The Products</title>
+</head>
+<body id="body" class="bg-myblack">
+    <!-- start loding -->
+    <main id="loading-screen" class="fixed inset-0 z-50 flex flex-col justify-center items-center backdrop-blur-sm bg-[radial-gradient(circle,_rgba(59,47,47,0.75),_rgba(59,47,47))]">
+        <img class="absolute w-3/4 animation-up-down -z-10" src="../css/sourecs/images/hero-section/front-beans.png" alt="">
+        <div class="overflow-hidden animation-open-down">
+            <img class="w-full max-w-[clamp(200px,40vw,320px)] h-auto" src="../css/sourecs/images/navgation/cafe-logo.png" alt="Café Logo">
+        </div>
+        <span class="flex justify-center items-center gap-4 text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite font-semibold font-prg animation-open-up">
+            <p>loading</p>
+            <div class="flex flex-row gap-2">
+                <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce"></div>
+                <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce [animation-delay:-.3s]"></div>
+                <div class="w-4 h-4 rounded-full bg-mywhite animate-bounce [animation-delay:-.5s]"></div>
+            </div>
+        </span>
+    </main>
+    <!-- end loding -->
+    <!-- start header section -->
+    <header class="absolute z-10 w-full h-1/12 flex justify-center items-center">
+        <div class="w-4/5 h-full p-4 flex justify-between items-center rounded-b-2xl bg-mywhite">
+            <a class="md:w-1/6 w-1/5 flex items-center justify-evenly p-1 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack border-2 rounded-full hover:scale-[1.05]" href="../index.html">
+                <i class="fas fa-arrow-left mr-2"></i>
+                <p class="md:block hidden">home</p>
+                <i class="fas fa-home"></i>
+            </a>
+            <img class="max-w-[clamp(35px,6vw,60px)] w-full h-auto" src="../css/sourecs/images/about/cafe-logo.png" alt="">
+            <a class="md:w-1/6 w-1/5 flex items-center justify-evenly p-1 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack border-2 rounded-full hover:scale-[1.05]" href="the menu.html">
+                <i class="fas fa-concierge-bell"></i>
+                <p class="md:block hidden"> menu </p>
+                <i class="fa-solid fa-arrow-right">
+                </i>
+            </a>
+        </div>
+    </header>
+    <!-- end header section -->
+    <!-- start hero section -->
+    <section class="w-full h-full flex flex-col items-center justify-center bg-[url('..//css/sourecs/images/products-site/hero-section/bg-products.jpg')] bg-cover bg-center bg-no-repeat">
+      <main class="w-full h-full flex flex-col justify-center items-center bg-radial to-black/50 backdrop-blur-[2px]">
+        <div class="relative w-1/2 md:h-2/5 h-/1/4">
+          <span class="relative w-full h-full px-10 flex flex-col justify-center items-center text-center font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite rounded-b-2xl">
+              <p class="md:absolute static px-4 font-title text-mygold text-shadow-md text-center bg-myblack rounded-full">Cafeccino</p>
+              <p class="md:absolute static top-5">Choose your moment from our </p>
+              <h1 class="-z-10 md:text-[clamp(2rem,30vw,15rem)] text-[clamp(1.25rem,15vw,8rem)] md:translate-0 -translate-y-1/12">PRODUCTS</h1>
+          </span>
+        </div>
+        <div class="w-3/4 h-1/12 p-4 flex justify-center items-center rounded-2xl bg-mywhite overflow-hidden">
+          <p id="caption" class="text-[clamp(1rem,2.5vw,1.25rem)] font-prg font-semibold text-myblack text-center">our world in your hand !</p>
+        </div>
+      </main>
+    </section>
+    <!-- end hero section -->
+    <!-- start the porducts -->
+    <section class="w-full h-full">
+    </section>
+    <!-- end the porducts -->
+    <!-- start footer -->
+    <footer class="w-full md:h-1/2 h-full flex md:flex-row flex-col md:flex-wrap flex-nowrap justify-center px-4 pt-8 bg-mywhite">
+      <div class="md:w-1/4 w-full md:h-5/6 h-1/4">
+        <a class=" h-1/4 flex items-center justify-center rounded-2xl bg-myblack" href="#top">
+          <img class="w-full max-w-[clamp(95px,16vw,145px)] h-auto" src="../css/sourecs/images/navgation/cafe-logo.png" alt="Café Logo">
+        </a>
+        <p class="pt-4 font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">follow us</p>
+        <span class="w-full py-4 flex justify-center items-center gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-blue-600 text-blue-600 hover:text-white transition-all duration-200">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-pink-500 text-pink-500 hover:text-white transition-all duration-200">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-red-600 text-red-600 hover:text-white transition-all duration-200">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-black text-black hover:text-white transition-all duration-200">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </span>
+      </div>
+      <main class="md:w-1/2 w-full md:h-5/6 h-1/2 pt-4 flex md:flex-row flex-col justify-start items-start md:gap-0 gap-4">
+        <div class="md:w-1/2 w-full flex flex-col justify-center md:items-center items-start md:px-0 px-4 gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">fast links:</p>
+          <ul class="list-disc font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-myblack">
+            <li class=" hover:scale-[1.05]"><a href="../index.html">About us</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">Menu</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">our Products</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">Location</a></li>
+          </ul>
+        </div>
+        <div class="md:w-1/2 w-full flex flex-col justify-center md:items-center items-start md:px-0 px-4 gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">Useful links:</p>
+          <ul class="list-disc font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-myblack">
+            <li class=" hover:scale-[1.05]"><a href="">Careers</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Events</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Gallery</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Privacy Policy</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </main>
+      <div class="md:w-1/4 w-full md:h-5/6 h-1/4 flex flex-col justify-start items-center">
+        <span class="w-full h-1/4 flex justify-center items-center gap-2 rounded-2xl bg-myblack">
+          <img class="max-w-[clamp(45px,8vw,75px)] w-full h-auto" src="../css/sourecs/images/navgation/white.png" alt="">
+          <p class=" font-title text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite">Revaluation</p>
+        </span>
+        <span class="w-full h-1/2 pt-4 flex flex-col justify-center items-center gap-5">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">Be our customer</p>
+          <button onclick="openModal('modal-log')" class="w-3/4 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite bg-myblack rounded-2xl hover:scale-[1.05] animation-glow">log in <i class="fas fa-sign-in-alt"></i></button>
+        </span>
+      </div>
+      <span class="w-full md:h-1/6 h-1/12 flex justify-center items-center rounded-t-2xl font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite bg-myblack">
+        ®2025 mohammad albalti | all right reserved
+      </span>
+    </footer>
+    <!-- end footer -->
+</body>
+<script>
+    const loading = document.getElementById('loading-screen');
+    const body = document.getElementById('body');
+    window.onload = function () {
+        loading.classList.add('opacity-0');
+        setTimeout(() => {
+            loading.classList.add('hidden');
+            body.style.overflow = 'auto';
+        }, 500);
+}
+    let indexia = 0;
+    const caption = document.getElementById('caption');
+    let caption_array = ['Try it once and you will do it again.',' Luxury products like you','Taste the journey of the other world','Take your time, the decision should be delicious']
+    setInterval(() => {
+        caption.classList.add('opacity-0');
+        caption.classList.add('translate-y-[150%]');
+        caption.classList.remove('text-mybrawon');
+        caption.classList.add('text-myblack');
+        setTimeout(() => {
+            caption.innerHTML = caption_array[indexia]
+        indexia++;
+        if (indexia > caption_array.length-1) {
+            indexia = 0;
+        }
+            caption.classList.remove('opacity-0');
+        caption.classList.remove('translate-y-[150%]');
+        }, 500);
+    }, 5000);
+</script>
+</html>
