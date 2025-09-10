@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="icon" sizes="32x32" href="../css/sourecs/images/about/cafe-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <title>Cafeccino menu</title>
 </head>
-<body id="body" class="bg-myblack overflow-hidden">
+<body id="body" class="bg-myblack">
     <!-- start loading screen -->
     <main id="loading-screen" class="fixed inset-0 z-50 flex flex-col justify-center items-center backdrop-blur-sm bg-[radial-gradient(circle,_rgba(59,47,47,0.75),_rgba(59,47,47))]">
         <img class="absolute w-3/4 animation-up-down -z-10" src="../css/sourecs/images/hero-section/front-beans.png" alt="">
@@ -47,29 +48,42 @@
     <!-- start poster -->
     <section class="w-full h-full bg-[url('..//css/sourecs/images/menu-site/bg-menu.jpg')] bg-cover bg-center bg-no-repeat ">
         <main class="w-full h-full flex flex-col justify-between items-center bg-radial to-black/50 backdrop-blur-xs">
-            <div class="relative -z-20 top-1/12 w-1/2 md:h-2/5 h-/1/4 shadow-2xl">
-                <img class="absolute top-0 -left-1/12 w-1/12" src="../css/sourecs/images/corner/corner-tl.png" alt="">
-                <span class="relative w-full h-full px-10 flex flex-col justify-center items-center text-center font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-myblack bg-mywhite rounded-b-2xl">
+            <div class="relative -z-20 top-1/12 w-1/2 md:h-2/5 h-/1/4">
+                <span class="relative w-full h-full px-10 flex flex-col justify-center items-center text-center font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite rounded-b-2xl">
                     <p class="md:absolute static px-4 font-title text-mygold text-shadow-md text-center bg-myblack rounded-full">Cafeccino</p>
                     <p class="md:absolute static top-5">Best Quality</p>
                     <h1 class="md:text-[clamp(2rem,30vw,15rem)] text-[clamp(1.25rem,15vw,8rem)]">MENU</h1>
                 </span>
-                <img class="absolute top-0 -right-1/12 w-1/12" src="../css/sourecs/images/corner/corner-tr.png" alt="">
             </div>
-            <div class="relative w-full h-1/4 p-4 flex md:flex-row flex-col md:justify-center justify-between items-center gap-20">
-                <div class="md:w-2/5 w-full h-full md:border-t-2 border-0 border-white rounded-l-3xl flex justify-start items-start">
-                    <span class="w-3/4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-myblack text-center bg-mywhite rounded-2xl md:rounded-tr-none rounded-tr-2xl p-8">
-                        <h1>Morning on Us <i class="fas fa-mug-hot"></i></h1>
-                        <p class="text-[clamp(0.875rem,2vw,1rem)] font-normal">enjoy 20% off your group’s total bill</p>
+            <div class="relative w-full md:h-1/2 h-1/4 flex flex-col justify-center items-center gap-20 overflow-hidden">
+                <span class="absolute rotate-12 w-[125%] h-1/6 flex justify-center items-center bg-mywhite text-[clamp(0.875rem,2vw,1rem)] font-prg font-semibold text-myblack text-center text-nowrap overflow-hidden">
+                    <span class="w-full flex justify-center items-center gap-2 animation-text-move">
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
+                        <p class="px-2 border-x-2">Order before 10 AM and get a free sweet treat</p>
                     </span>
-                </div>
-                <div class="md:w-2/5 w-full h-full md:border-b-2 border-0 border-white rounded-r-3xl flex justify-end items-end">
-                    <span class="w-3/4 font-prg font-semibold text-[clamp(0.875rem,2vw,1.125rem)] text-myblack text-center bg-mywhite rounded-2xl md:rounded-bl-none rounded-bl-2xl p-8">
-                        <h1><i class="fa-solid fa-utensils"></i> Friends’ Gathering</h1>
-                        <p class="text-[clamp(0.875rem,2vw,1rem)] font-normal">Order before 10 AM and get a free sweet treat</p>
+                </span>
+                <span class="absolute -rotate-12 w-[125%] h-1/6 flex justify-center items-center bg-mywhite text-[clamp(0.875rem,2vw,1rem)] font-prg font-semibold text-myblack text-center text-nowrap overflow-hidden shadow-2xl">
+                    <span class="w-full flex justify-center items-center gap-2 animation-text-move">
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
+                        <p class="px-2 border-x-2">enjoy 20% off your group’s total bill</p>
                     </span>
-                </div>
-                <img class="absolute md:-z-10 z-10 md:w-1/3 w-3/4 animation-spin" src="../css/sourecs/images/menu-site/cup-spin.png" alt="" >
+                </span>
             </div>
             <div class="w-3/4 h-1/12 p-4 flex justify-center items-center rounded-t-2xl bg-mywhite">
                 <p class="text-[clamp(1rem,2.5vw,1.25rem)] font-prg font-semibold text-myblack text-center">Open Daily from 9:00 AM to 12:00 Midnight</p>
@@ -77,6 +91,593 @@
         </main>
     </section>
     <!-- end poster -->
+    <section class="w-full h-full md:h-[150%] flex flex-col items-center gap-4 p-4" x-data="{ type: 'Hot' }">
+      <h1 class="w-3/4 rounded-t-3xl font-title text-center text-[clamp(2rem,5vw,3rem)] text-shadow-md text-mywhite border-2 border-dashed border-white">
+        Choose. Sip. Enjoy
+      </h1>
+      <div class="relative w-11/12 p-4 flex gap-4 justify-center rounded-b-3xl border-2 border-dashed border-white">
+    <button @click="type = 'Hot'" :class="type === 'Hot' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-mug-hot md:pr-2 pr-0"></i><p class="md:block hidden">Hot</p>
+    </button>
+    <button @click="type = 'iced'" :class="type === 'iced' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-snowflake md:pr-2 pr-0"></i><p class="md:block hidden">iced</p>
+    </button>
+    <button @click="type = 'Signature'" :class="type === 'Signature' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-cocktail md:pr-2 pr-0"></i><p class="md:block hidden">Signature</p>
+    </button>
+    <button @click="type = 'dessert'" :class="type === 'dessert' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-cookie md:pr-2 pr-0"></i><p class="md:block hidden">dessert</p>
+    </button>
+    <button @click="type = 'Light Meals'" :class="type === 'Light Meals' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-hamburger md:pr-2 pr-0"></i><p class="md:block hidden">Light Meals</p>
+    </button>
+    <button @click="type = 'Snacks'" :class="type === 'Snacks' ? 'bg-mywhite text-myblack border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'text-mywhite border-2'" class="md:w-1/3 w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+      <i class="fas fa-utensils md:pr-2 pr-0"></i><p class="md:block hidden">Snacks</p>
+    </button>
+      </div>
+      <main class="relative w-full h-full flex justify-center items-center">
+        <div x-show="type === 'Hot'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+            <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Hot Beverages</legend>
+            <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+  <li class="flex justify-between">
+    <span>Latte</span>
+    <span class="text-mygold font-semibold">$4.50</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Espresso</span>
+    <span class="text-mygold font-semibold">$3.00</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Americano</span>
+    <span class="text-mygold font-semibold">$3.50</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Cappuccino</span>
+    <span class="text-mygold font-semibold">$4.00</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Mocha</span>
+    <span class="text-mygold font-semibold">$4.75</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Flat White</span>
+    <span class="text-mygold font-semibold">$4.25</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Macchiato</span>
+    <span class="text-mygold font-semibold">$3.75</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Cortado</span>
+    <span class="text-mygold font-semibold">$3.80</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Turkish Coffee</span>
+    <span class="text-mygold font-semibold">$3.20</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Arabic Coffee with Cardamom</span>
+    <span class="text-mygold font-semibold">$3.50</span>
+  </li>
+  <li class="flex justify-between">
+    <span>French Coffee</span>
+    <span class="text-mygold font-semibold">$4.00</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Hot Chocolate</span>
+    <span class="text-mygold font-semibold">$4.25</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Black Tea</span>
+    <span class="text-mygold font-semibold">$2.50</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Green Tea</span>
+    <span class="text-mygold font-semibold">$2.75</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Herbal Tea</span>
+    <span class="text-mygold font-semibold">$3.00</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Karak Tea</span>
+    <span class="text-mygold font-semibold">$3.20</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Masala Chai</span>
+    <span class="text-mygold font-semibold">$3.50</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Chai Latte</span>
+    <span class="text-mygold font-semibold">$3.80</span>
+  </li>
+  <li class="flex justify-between">
+    <span>Matcha Latte</span>
+    <span class="text-mygold font-semibold">$4.50</span>
+  </li>
+</ul>
+          </fieldset>
+        </div>
+        <div x-show="type === 'iced'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+  <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Iced Beverages</legend>
+  <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+    <li class="flex justify-between">
+      <span>Iced Americano</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Iced Latte</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Iced Mocha</span>
+      <span class="text-mygold font-semibold">$4.75</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Iced Spanish Latte</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Iced Matcha Latte</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Iced Caramel Macchiato</span>
+      <span class="text-mygold font-semibold">$4.85</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Cold Brew Coffee</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Frappuccino (Caramel)</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Frappuccino (Mocha)</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Frappuccino (Vanilla)</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Milkshake (Vanilla)</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Milkshake (Chocolate)</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Milkshake (Strawberry)</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fresh Orange Juice</span>
+      <span class="text-mygold font-semibold">$3.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fresh Lemon Juice</span>
+      <span class="text-mygold font-semibold">$3.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fresh Mango Juice</span>
+      <span class="text-mygold font-semibold">$4.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fresh Strawberry Juice</span>
+      <span class="text-mygold font-semibold">$4.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Watermelon Mint Juice</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mixed Berry Juice</span>
+      <span class="text-mygold font-semibold">$4.30</span>
+    </li>
+  </ul>
+</fieldset>
+
+        </div>
+        <div x-show="type === 'Signature'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+  <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Signature Drinks</legend>
+  <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+    <li class="flex justify-between">
+      <span>Spanish Latte</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Caramel Macchiato</span>
+      <span class="text-mygold font-semibold">$4.85</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Matcha Latte</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Pistachio Latte</span>
+      <span class="text-mygold font-semibold">$5.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Saffron Latte</span>
+      <span class="text-mygold font-semibold">$5.30</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Coconut Coffee</span>
+      <span class="text-mygold font-semibold">$4.95</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Hazelnut Latte</span>
+      <span class="text-mygold font-semibold">$4.85</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Lavender Coffee</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Spanish Mocha</span>
+      <span class="text-mygold font-semibold">$5.10</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Cold Brew with Vanilla</span>
+      <span class="text-mygold font-semibold">$4.70</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Date Coffee</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Rose Latte</span>
+      <span class="text-mygold font-semibold">$5.10</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Honey Cinnamon Latte</span>
+      <span class="text-mygold font-semibold">$5.15</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Vanilla Bean Latte</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mocha Mint</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Peanut Butter Latte</span>
+      <span class="text-mygold font-semibold">$5.25</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Salted Caramel Latte</span>
+      <span class="text-mygold font-semibold">$5.15</span>
+    </li>
+    <li class="flex justify-between">
+      <span>White Chocolate Mocha</span>
+      <span class="text-mygold font-semibold">$5.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Maple Latte</span>
+      <span class="text-mygold font-semibold">$5.10</span>
+    </li>
+  </ul>
+</fieldset>
+        </div>
+        <div x-show="type === 'dessert'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+  <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Desserts</legend>
+  <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+    <li class="flex justify-between">
+      <span>Cheesecake</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Brownies</span>
+      <span class="text-mygold font-semibold">$3.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Tiramisu</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Muffins</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Cookies</span>
+      <span class="text-mygold font-semibold">$2.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Croissant (Plain)</span>
+      <span class="text-mygold font-semibold">$3.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Croissant (Chocolate)</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Croissant (Cheese)</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Waffles with Toppings</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Pancakes</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Éclairs</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fruit Tart</span>
+      <span class="text-mygold font-semibold">$4.60</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Chocolate Soufflé</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Donuts (Various Flavors)</span>
+      <span class="text-mygold font-semibold">$3.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>French Macarons</span>
+      <span class="text-mygold font-semibold">$5.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Baklava</span>
+      <span class="text-mygold font-semibold">$4.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Carrot Cake</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Red Velvet Cake</span>
+      <span class="text-mygold font-semibold">$4.70</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Apple Pie</span>
+      <span class="text-mygold font-semibold">$4.40</span>
+    </li>
+  </ul>
+</fieldset>
+
+        </div>
+        <div x-show="type === 'Light Meals'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+  <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Light Meals</legend>
+  <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+    <li class="flex justify-between">
+      <span>Avocado Toast</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Grilled Chicken Sandwich</span>
+      <span class="text-mygold font-semibold">$5.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Tuna Sandwich</span>
+      <span class="text-mygold font-semibold">$5.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Egg & Avocado Sandwich</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mini Pizza</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Chicken & Cheese Roll</span>
+      <span class="text-mygold font-semibold">$5.10</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Caesar Salad</span>
+      <span class="text-mygold font-semibold">$4.70</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Greek Salad</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Quinoa Salad</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Fresh Fruit Salad</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Club Sandwich</span>
+      <span class="text-mygold font-semibold">$5.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Smoked Salmon Bagel</span>
+      <span class="text-mygold font-semibold">$6.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Vegetable Wrap</span>
+      <span class="text-mygold font-semibold">$4.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Chicken Wrap</span>
+      <span class="text-mygold font-semibold">$5.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Falafel Wrap</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Grilled Cheese Sandwich</span>
+      <span class="text-mygold font-semibold">$4.40</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Turkey & Cheese Sandwich</span>
+      <span class="text-mygold font-semibold">$5.30</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Caprese Sandwich</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Hummus & Veggie Plate</span>
+      <span class="text-mygold font-semibold">$4.60</span>
+    </li>
+  </ul>
+</fieldset>
+
+        </div>
+        <div x-show="type === 'Snacks'"  x-transition:enter="transition duration-[1500ms] ease-out"  x-transition:enter-start="opacity-0"  x-transition:enter-end="opacity-100"  x-transition:leave="transition duration-300 ease-in"  x-transition:leave-start="opacity-100"  x-transition:leave-end="opacity-0" class=" w-full h-full flex justify-center items-center absolute">
+          <fieldset class="w-full h-full border-2 border-white border-dashed rounded-xl p-4">
+  <legend class="px-4 py-1 font-title font-medium text-[clamp(1.25rem,3.5vw,2rem)] text-mygold">Side Dishes / Snacks</legend>
+  <ul class="md:px-16 px-4 font-prg text-mywhite font-medium text-[clamp(1rem,2.5vw,1.25rem)] space-y-2">
+    <li class="flex justify-between">
+      <span>French Fries (Classic)</span>
+      <span class="text-mygold font-semibold">$3.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>French Fries (Spicy)</span>
+      <span class="text-mygold font-semibold">$3.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Potato Wedges</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mozzarella Sticks</span>
+      <span class="text-mygold font-semibold">$4.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Popcorn Chicken</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Nachos with Cheese Sauce</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Garlic Bread</span>
+      <span class="text-mygold font-semibold">$3.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Onion Rings</span>
+      <span class="text-mygold font-semibold">$3.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Cheese Quesadilla</span>
+      <span class="text-mygold font-semibold">$4.60</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mini Spring Rolls</span>
+      <span class="text-mygold font-semibold">$4.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Chicken Nuggets</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Stuffed Grape Leaves</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Falafel Balls</span>
+      <span class="text-mygold font-semibold">$3.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mini Meat Pies</span>
+      <span class="text-mygold font-semibold">$4.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Cheese Sambousek</span>
+      <span class="text-mygold font-semibold">$4.50</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Veggie Sticks with Dip</span>
+      <span class="text-mygold font-semibold">$3.80</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mini Chicken Skewers</span>
+      <span class="text-mygold font-semibold">$5.00</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Sweet Potato Fries</span>
+      <span class="text-mygold font-semibold">$3.90</span>
+    </li>
+    <li class="flex justify-between">
+      <span>Mini Cheese Puffs</span>
+      <span class="text-mygold font-semibold">$4.20</span>
+    </li>
+  </ul>
+</fieldset>
+
+        </div>
+      </main>
+    </section>
+    <!-- start footer -->
+    <footer class="w-full md:h-1/2 h-full flex md:flex-row flex-col md:flex-wrap flex-nowrap justify-center px-4 pt-8 bg-mywhite">
+      <div class="md:w-1/4 w-full md:h-5/6 h-1/4">
+        <a class=" h-1/4 flex items-center justify-center rounded-2xl bg-myblack" href="#top">
+          <img class="w-full max-w-[clamp(95px,16vw,145px)] h-auto" src="../css/sourecs/images/navgation/cafe-logo.png" alt="Café Logo">
+        </a>
+        <p class="pt-4 font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">follow us</p>
+        <span class="w-full py-4 flex justify-center items-center gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-blue-600 text-blue-600 hover:text-white transition-all duration-200">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-pink-500 text-pink-500 hover:text-white transition-all duration-200">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-red-600 text-red-600 hover:text-white transition-all duration-200">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="w-[2.5rem] aspect-square flex items-center justify-center border rounded-full hover:bg-black text-black hover:text-white transition-all duration-200">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </span>
+      </div>
+      <main class="md:w-1/2 w-full md:h-5/6 h-1/2 pt-4 flex md:flex-row flex-col justify-start items-start md:gap-0 gap-4">
+        <div class="md:w-1/2 w-full flex flex-col justify-center md:items-center items-start md:px-0 px-4 gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">fast links:</p>
+          <ul class="list-disc font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-myblack">
+            <li class=" hover:scale-[1.05]"><a href="../index.html">About us</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">Menu</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">our Products</a></li>
+            <li class=" hover:scale-[1.05]"><a href="../index.html">Location</a></li>
+          </ul>
+        </div>
+        <div class="md:w-1/2 w-full flex flex-col justify-center md:items-center items-start md:px-0 px-4 gap-3 text-[clamp(0.875rem,2vw,1.125rem)]">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">Useful links:</p>
+          <ul class="list-disc font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-myblack">
+            <li class=" hover:scale-[1.05]"><a href="">Careers</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Events</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Gallery</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Privacy Policy</a></li>
+            <li class=" hover:scale-[1.05]"><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </main>
+      <div class="md:w-1/4 w-full md:h-5/6 h-1/4 flex flex-col justify-start items-center">
+        <span class="w-full h-1/4 flex justify-center items-center gap-2 rounded-2xl bg-myblack">
+          <img class="max-w-[clamp(45px,8vw,75px)] w-full h-auto" src="../css/sourecs/images/navgation/white.png" alt="">
+          <p class=" font-title text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite">Revaluation</p>
+        </span>
+        <span class="w-full h-1/2 pt-4 flex flex-col justify-center items-center gap-5">
+          <p class="font-prg font-semibold text-center text-[clamp(1.25rem,3.5vw,2rem)] text-myblack">Be our customer</p>
+          <button onclick="openModal('modal-log')" class="w-3/4 p-2 font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-mywhite bg-myblack rounded-2xl hover:scale-[1.05] animation-glow">log in <i class="fas fa-sign-in-alt"></i></button>
+        </span>
+      </div>
+      <span class="w-full md:h-1/6 h-1/12 flex justify-center items-center rounded-t-2xl font-prg text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite bg-myblack">
+        ®2025 mohammad albalti | all right reserved
+      </span>
+    </footer>
+    <!-- end footer -->
 </body>
 <script>
     const loading = document.getElementById('loading-screen');
@@ -85,7 +686,7 @@
         loading.classList.add('opacity-0');
         setTimeout(() => {
             loading.classList.add('hidden');
-            body.classList.remove('overflow-hidden');
+            body.style.overflow = 'auto';
         }, 500);
 }
 </script>
