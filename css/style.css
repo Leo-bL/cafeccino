@@ -14,6 +14,13 @@ body::-webkit-scrollbar-thumb{
     background-color: #f8f8f8;
     border-radius: 4px;
 }
+#fav-section::-webkit-scrollbar{
+    width: 8px;
+}
+#fav-section::-webkit-scrollbar-thumb{
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
@@ -97,6 +104,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .animation-spin{
         animation: spin 80s infinite;
     }
+    .animation-text-move{
+        animation: text-move 60s linear infinite;
+    }
 }
 @keyframes up-down {
     0%,100%{
@@ -160,4 +170,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 @keyframes spin {
     to{rotate: 360deg;}
+}
+@keyframes text-move {
+    from{
+        transform:translateX(0) ;
+    }
+    to{
+        transform:translateX(-50%) ;
+    }
 }
