@@ -63,7 +63,7 @@
     </section>
     <!-- end hero section -->
     <!-- start the porducts -->
-    <section class="w-full h-[450%] flex md:flex-wrap flex-nowrap md:flex-row flex-col justify-center items-start pb-4 overflow-hidden" x-data="{ type: 'Hot' }">
+    <section class="w-full h-[450%] flex md:flex-wrap flex-nowrap md:flex-row flex-col justify-center items-start px-4 pb-4 overflow-hidden" x-data="{ type: 'Hot' }">
       <div class="w-full h-[2%] flex justify-between items-center px-4">
         <div class="relative w-1/3 h-full flex justify-center items-center bg-mywhite rounded-b-3xl">
           <img class="absolute top-0 -left-[8%] w-1/12" src="../css/sourecs/images/corner/corner-tl.png" alt="">
@@ -100,8 +100,11 @@
       <i class="fas fa-utensils md:pr-2 pr-0"></i><p class="md:block hidden">Snacks</p>
     </button>
     <hr class="w-full tetx-myblack">
-    <button onclick="openModal('fav-modal')" class="md:w-full w-3/4 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-red-500 border-2 hover:scale-[1.05]">
+    <button onclick="openModal('fav-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-red-500 border-2 hover:scale-[1.05]">
       <i class="fas fa-regular fa-heart pr-2"></i><p>favorite</p>
+    </button>
+    <button onclick="openModal('cart-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-amber-500 border-2 hover:scale-[1.05]">
+      <i class="fas fa-shopping-cart pr-2 md:inline hidden"></i><p>cart</p>
     </button>
       </div>
       <main class="relative md:w-3/4 w-full h-full flex justify-center items-center">
@@ -245,6 +248,7 @@
         </main>
       </div>
     </div>
+    <!--end log modal -->
     <!-- start fav modal -->
     <div id="fav-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
       <label onclick="closeModal('fav-modal')" class="absolute w-full h-full"></label>
@@ -258,7 +262,51 @@
       </div>
     </div>
     <!-- end fav modal -->
-    <!--end log modal -->
+    <!-- start cart modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+      <label onclick="closeModal('cart-modal')" class="absolute w-full h-full"></label>
+      <div id="modalContent" class="md:w-3/5 w-11/12 max-h-[100vh] h-auto flex flex-col  items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/2 backdrop-blur-[4px] rounded-xl p-6  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+        <button onclick="closeModal('cart-modal')" class="cursor-pointer bg-brown-600 text-mywhite px-4 py-2 rounded">
+          <i class="fas fa-xmark text-xl"></i>
+        </button>
+          <main id="cart-section" class="w-full grid grid-cols-2 md:grid-cols-3 gap-4 p-4 rounded-2xl overflow-y-auto">
+            <h1 class="fav-title md:col-span-2 col-span-1 text-center font-prg font-semibold text-[clamp(1.25rem,3.5vw,2rem)] text-mywhite">Treat Yourself Fully</h1>
+            <a class="w-1/2 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite hover:scale-[1.05] animation-glow" href="">
+                  <i class="fas fa-clipboard-list pr-2"></i><p>Buy It</p>
+                </a>
+          </main>
+      </div>
+    </div>
+    <!-- end cart modal -->
+    <!-- start by modal -->
+    <div id="buy-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+            <label onclick="closeModal('buy-modal')" class="absolute w-full h-full"></label>
+      <div id="modalContent" class="w-11/12 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/20 backdrop-blur-[4px] rounded-xl  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
+        <button onclick="closeModal('buy-modal')" class="cursor-pointer bg-brown-600 text-mywhite px-4 py-2 rounded">
+          <i class="fas fa-xmark text-xl"></i>
+        </button>
+          <main id="buy-section" class="w-full h-full flex justify-center gap-4 overflow-hidden">
+            <div class="w-3/4 h-full flex flex-col pl-16 text-shadow-md text-mywhite font-prg">
+              <h1 id="buy-title" class="text-wrap font-semibold text-[clamp(2rem,5vw,3rem)]"></h1>
+              <p id="buy-desc" class="w-1/2  text-[clamp(1rem,2.5vw,1.25rem)]"></p>
+              <span class="w-full h-1/4 flex items-center gap-4 text-shadow-md text-mywhite text-center font-prg">
+                <p id="buy-price" class="w-1/4 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite border-2 rounded-full"></p>
+                <p class="w-1/4 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mygold bg-myblack rounded-full"><i class="fas fa-truck-fast"></i> Free dilvering</p>
+              </span>
+              <span class="w-full h-1/4 flex items-center gap-4 text-shadow-md text-mywhite text-center font-prg border-t-2">
+                <a class="w-1/2 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite hover:scale-[1.05] animation-glow" href="">
+                  <i class="fas fa-clipboard-list pr-2"></i><p>Order it now !</p>
+                </a>
+              </span>
+            </div>
+            <span class="relative w-1/4 h-full flex justify-center items-center rounded-l-3xl bg-mywhite">
+              <div class="absolute -left-1/2 w-full h-3/4 flex justify-center items-center bg-myblack rounded-3xl text-mygold"><img id="buy-img" class="w-11/12 h-11/12 border-2 rounded-3xl shadow-md" src="" alt=""></div>
+            </span>
+            
+          </main>
+    </div>
+    </div>
+    <!-- end by modal -->
     <!--end the modals -->
 </body>
 <script src="../js/products.js">
