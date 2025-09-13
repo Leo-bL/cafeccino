@@ -104,7 +104,6 @@ window.onload = function () {
         body.style.overflow = `auto`
     }, 500);
 }
-    
 // end loading 
 const btn_menu = document.getElementById('b-menu');
 const bars = document.querySelectorAll('.bar')
