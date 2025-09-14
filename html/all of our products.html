@@ -64,46 +64,46 @@
     <!-- end hero section -->
     <!-- start the porducts -->
     <section class="w-full h-[450%] flex md:flex-wrap flex-nowrap md:flex-row flex-col justify-center items-start px-4 pb-4 overflow-hidden" x-data="{ type: 'Hot' }">
-      <div class="w-full h-[2%] flex justify-between items-center px-4">
-        <div class="relative w-1/3 h-full flex justify-center items-center bg-mywhite rounded-b-3xl">
-          <img class="absolute top-0 -left-[8%] w-1/12" src="../css/sourecs/images/corner/corner-tl.png" alt="">
+      <div class="w-full h-[2%] flex justify-center items-center px-4">
+        <div class="relative w-11/12 h-full flex justify-center items-center bg-mywhite rounded-b-3xl">
+          <img class="absolute top-0 -left-[4%] w-[4%]" src="../css/sourecs/images/corner/corner-tl.png" alt="">
           <h1 class="font-title text-center text-[clamp(1.25rem,3.5vw,2rem)] text-shadow-md text-myblack">
             Start Your Flavor Journey
           </h1>
-          <img class="absolute top-0 -right-[8%] w-1/12" src="../css/sourecs/images/corner/corner-tr.png" alt="">
+          <img class="absolute top-0 -right-[4%] w-[4%]" src="../css/sourecs/images/corner/corner-tr.png" alt="">
         </div>
-        <div class="relative w-1/2 h-full bg-mywhite rounded-b-3xl">
+        <!-- <div class="relative w-1/2 h-full bg-mywhite rounded-b-3xl">
           <img class="absolute top-0 -left-[8%] w-1/12" src="../css/sourecs/images/corner/corner-tl.png" alt="">
           <img class="absolute top-0 -right-[8%] w-1/12" src="../css/sourecs/images/corner/corner-tr.png" alt="">
-        </div>
+        </div> -->
       </div>
       <div class="relative md:w-1/4 w-full md:h-3/4 h-[5%] p-4 my-4 flex md:flex-col flex-row md:flex-nowrap flex-wrap gap-4 md:justify-start justify-center items-center rounded-3xl bg-mywhite">
         <h1 class="text-center w-full font-prg font-semibold text-[clamp(1rem,2.5vw,1.25rem)] text-shadow-md text-myblack">
         Choose & Chill
       </h1>
-    <button @click="type = 'Hot'" :class="type === 'Hot' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'Hot'" :class="type === 'Hot' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-mug-hot md:pr-2 pr-0"></i><p class="md:block hidden">Hot</p>
     </button>
-    <button @click="type = 'iced'" :class="type === 'iced' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'iced'" :class="type === 'iced' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-snowflake md:pr-2 pr-0"></i><p class="md:block hidden">iced</p>
     </button>
-    <button @click="type = 'Signature'" :class="type === 'Signature' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'Signature'" :class="type === 'Signature' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-cocktail md:pr-2 pr-0"></i><p class="md:block hidden">Signature</p>
     </button>
-    <button @click="type = 'dessert'" :class="type === 'dessert' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'dessert'" :class="type === 'dessert' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-cookie md:pr-2 pr-0"></i><p class="md:block hidden">dessert</p>
     </button>
-    <button @click="type = 'Light Meals'" :class="type === 'Light Meals' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'Light Meals'" :class="type === 'Light Meals' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-hamburger md:pr-2 pr-0"></i><p class="md:block hidden">Light Meals</p>
     </button>
-    <button @click="type = 'Snacks'" :class="type === 'Snacks' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
+    <button @click="type = 'Snacks'" :class="type === 'Snacks' ? 'bg-myblack text-mywhite border-gray-800 shadow-md shadow-gray-900/25 scale-[1.1]' : 'hover:scale-[1.05] cursor-pointer text-myblack border-2'" class="md:w-full w-1/12 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center">
       <i class="fas fa-utensils md:pr-2 pr-0"></i><p class="md:block hidden">Snacks</p>
     </button>
     <hr class="w-full tetx-myblack">
-    <button onclick="openModal('fav-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-red-500 border-2 hover:scale-[1.05]">
+    <button onclick="openModal('fav-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-red-500 border-2 hover:scale-[1.05] cursor-pointer">
       <i class="fas fa-regular fa-heart pr-2"></i><p>favorite</p>
     </button>
-    <button onclick="openModal('cart-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-amber-500 border-2 hover:scale-[1.05]">
+    <button onclick="openModal('cart-modal')" class="md:w-full w-1/3 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-amber-500 border-2 hover:scale-[1.05] cursor-pointer">
       <i class="fas fa-shopping-cart pr-2 md:inline hidden"></i><p>cart</p>
     </button>
       </div>
@@ -278,7 +278,7 @@
       </div>
     </div>
     <!-- end cart modal -->
-    <!-- start by modal -->
+    <!-- start buy modal -->
     <div id="buy-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
             <label onclick="closeModal('buy-modal')" class="absolute w-full h-full"></label>
       <div id="modalContent" class="w-11/12 h-3/4 flex flex-col items-start bg-gradient-to-l from-[#7B5E57]/20 via-[#A9746E]/40 to-[#7B5E57]/20 backdrop-blur-[4px] rounded-xl  transition-all scale-95 animate-fade-in" style="box-shadow:0 0 0 1.2px rgba(255,255,255,0.25),0 0 40px rgba(255,255,255,0.1) ;">
@@ -286,27 +286,28 @@
           <i class="fas fa-xmark text-xl"></i>
         </button>
           <main id="buy-section" class="w-full h-full flex justify-center gap-4 overflow-hidden">
-            <div class="w-3/4 h-full flex flex-col pl-16 text-shadow-md text-mywhite font-prg">
+            <div class="md:w-3/4 w-full h-full flex flex-col md:items-start items-center md:pl-16 p-4 text-shadow-md text-mywhite font-prg">
               <h1 id="buy-title" class="text-wrap font-semibold text-[clamp(2rem,5vw,3rem)]"></h1>
-              <p id="buy-desc" class="w-1/2  text-[clamp(1rem,2.5vw,1.25rem)]"></p>
-              <span class="w-full h-1/4 flex items-center gap-4 text-shadow-md text-mywhite text-center font-prg">
-                <p id="buy-price" class="w-1/4 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite border-2 rounded-full"></p>
-                <p class="w-1/4 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mygold bg-myblack rounded-full"><i class="fas fa-truck-fast"></i> Free dilvering</p>
+              <div class="w-1/2 h-3/4 flex md:hidden justify-center items-center bg-myblack rounded-3xl text-mygold"><img class="buy-img w-11/12 h-11/12 border-2 rounded-3xl shadow-md" src="" alt=""></div>
+              <p id="buy-desc" class="md:w-1/2 w-full text-[clamp(1rem,2.5vw,1.25rem)] text-center md:text-start"></p>
+              <span class="w-full h-1/4 flex md:justify-start justify-center items-center gap-4 text-shadow-md text-mywhite text-center font-prg">
+                <p id="buy-price" class="md:w-1/4 w-1/2 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mywhite border-2 rounded-full"></p>
+                <p class="md:w-1/4 w-1/2 p-2 text-[clamp(1rem,2.5vw,1.25rem)] text-mygold bg-myblack rounded-full"><i class="fas fa-truck-fast"></i> Free dilvering</p>
               </span>
-              <span class="w-full h-1/4 flex items-center gap-4 text-shadow-md text-mywhite text-center font-prg border-t-2">
+              <span class="w-full h-1/4 flex md:justify-start justify-center items-center gap-4 text-shadow-md text-mywhite text-center font-prg border-t-2">
                 <a class="w-1/2 flex justify-center items-center px-4 py-2 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack bg-mywhite hover:scale-[1.05] animation-glow" href="">
                   <i class="fas fa-clipboard-list pr-2"></i><p>Order it now !</p>
                 </a>
               </span>
             </div>
-            <span class="relative w-1/4 h-full flex justify-center items-center rounded-l-3xl bg-mywhite">
-              <div class="absolute -left-1/2 w-full h-3/4 flex justify-center items-center bg-myblack rounded-3xl text-mygold"><img id="buy-img" class="w-11/12 h-11/12 border-2 rounded-3xl shadow-md" src="" alt=""></div>
+            <span class="relative w-1/4 h-full md:flex hidden justify-center items-center rounded-l-3xl bg-mywhite">
+              <div class="absolute md:-left-1/2 left-0 w-full h-3/4 flex justify-center items-center bg-myblack rounded-3xl text-mygold"><img class="buy-img w-11/12 h-11/12 border-2 rounded-3xl shadow-md" src="" alt=""></div>
             </span>
             
           </main>
     </div>
     </div>
-    <!-- end by modal -->
+    <!-- end buy modal -->
     <!--end the modals -->
 </body>
 <script src="../js/products.js">
