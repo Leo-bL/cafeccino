@@ -480,43 +480,42 @@
             let buy_btn = document.createElement('button');
             let cart_btn = document.createElement('button');
             let icon = document.createElement('i');
-            let icon_two = document.createElement('i');
             let icon_three = document.createElement('i');
 
             card.className = 'card relative h-11/12 flex flex-col justify-end items-center overflow-hidden hover:scale-[1.05] rounded-2xl backdrop-blur-xs bg-[linear-gradient(180deg,#ffffff0c,#ffffff77)]';
-            image.className ='absolute h-[45%] top-[15%] md:top-[2%] drop-shadow-lg font-prg font-semibold text-mywhite';
+            image.className ='absolute h-[45%] top-[15%] md:top-[2%] drop-shadow-lg rounded-3xl text-myblack border-2';
             card_content.className = 'w-full h-3/5 px-4 pt-8 flex flex-col justify-center items-center gap-4 font-prg text-center text-myblack text-[clamp(1.25rem,3.5vw,2rem)] rounded-3xl bg-mywhite shadow-2xl';
             title.className ='font-semibold';
-            card_footer_btns.className = 'w-full flex justify-center items-center gap-4'
+            card_footer_btns.className = 'absolute top-0 right-0 flex flex-col justify-center items-center gap-2 p-4  text-mywhite'
 
-            card_footer.className = 'w-3/4 flex flex-col items-center border-t-2 py-4';
+            card_footer.className = 'w-3/4 flex flex-col items-center gap-2 border-t-2 py-4';
             price.className = 'font-semibold text-[clamp(0.875rem,2vw,1rem)]';
             fav_btn.className ='cursor-pointer hover:scale-[1.1]';
-            buy_btn.className =' cursor-pointer hover:scale-[1.1]';
+            buy_btn.className =' cursor-pointer md:w-3/4 w-11/12 flex justify-center items-center p-1 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack border-2 hover:scale-[1.05]';
             cart_btn.className =' cursor-pointer hover:scale-[1.1]';
             icon.className = 'fa-regular fa-heart hover:text-red-500';
-            icon_two.className = 'fas fa-money-bill hover:text-green-500';
             icon_three.className = 'fas fa-shopping-cart hover:text-amber-500';
             
-            image.src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.png`
+            image.src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.jpg`
             image.alt ="we dont't have image yet..";
             image.setAttribute('loading', 'lazy');
 
             title.textContent = prod[p_filed][i].name;
             price.textContent = prod[p_filed][i].price+' SYP';
+            buy_btn.textContent = 'buy it now'
 
             fav_btn.appendChild(icon);
-            buy_btn.appendChild(icon_two);
             cart_btn.appendChild(icon_three);
             card_footer_btns.appendChild(fav_btn);
-            card_footer_btns.appendChild(buy_btn);
             card_footer_btns.appendChild(cart_btn);
             card_footer.appendChild(price);
-            card_footer.appendChild(card_footer_btns);
+            card_footer.appendChild(buy_btn);
+            
 
             card_content.appendChild(title);
 
             card_content.appendChild(card_footer);
+            card_content.appendChild(card_footer_btns);
 
             card.appendChild(image);
             card.appendChild(card_content);
@@ -540,12 +539,13 @@
             const buy_title = document.getElementById('buy-title');
             const buy_desc = document.getElementById('buy-desc');
             const buy_price = document.getElementById('buy-price');
-            const buy_img = document.getElementById('buy-img');
+            const buy_img = document.getElementsByClassName('buy-img');
             buy_btn.onclick = function () {
                 buy_title.textContent = prod[p_filed][i].name;
                 buy_desc.textContent = de[p_filed][i];
                 buy_price.textContent = prod[p_filed][i].price+' SYP';
-                buy_img.src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.png`
+                buy_img[0].src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.jpg`
+                buy_img[1].src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.jpg`
                 openModal('buy-modal');
             }
             let cart_card_copy = null;
