@@ -483,18 +483,18 @@
             let icon_three = document.createElement('i');
 
             card.className = 'card relative h-11/12 flex flex-col justify-end items-center overflow-hidden hover:scale-[1.05] rounded-2xl backdrop-blur-xs bg-[linear-gradient(180deg,#ffffff0c,#ffffff77)]';
-            image.className ='absolute h-[45%] top-[15%] md:top-[2%] drop-shadow-lg rounded-3xl text-myblack border-2';
+            image.className ='absolute h-2/5 top-[3%] drop-shadow-lg rounded-3xl text-myblack border-2';
             card_content.className = 'w-full h-3/5 px-4 pt-8 flex flex-col justify-center items-center gap-4 font-prg text-center text-myblack text-[clamp(1.25rem,3.5vw,2rem)] rounded-3xl bg-mywhite shadow-2xl';
             title.className ='font-semibold';
             card_footer_btns.className = 'absolute top-0 right-0 flex flex-col justify-center items-center gap-2 p-4  text-mywhite'
 
             card_footer.className = 'w-3/4 flex flex-col items-center gap-2 border-t-2 py-4';
             price.className = 'font-semibold text-[clamp(0.875rem,2vw,1rem)]';
-            fav_btn.className ='cursor-pointer hover:scale-[1.1]';
+            fav_btn.className ='cursor-pointer hover:scale-[1.1] drop-shadow-md drop-shadow-gray-700/75';
             buy_btn.className =' cursor-pointer md:w-3/4 w-11/12 flex justify-center items-center p-1 rounded-full font-prg font-medium text-[clamp(1rem,2.5vw,1.25rem)] text-center text-myblack border-2 hover:scale-[1.05]';
-            cart_btn.className =' cursor-pointer hover:scale-[1.1]';
+            cart_btn.className =' cursor-pointer hover:scale-[1.1] drop-shadow-md drop-shadow-gray-700/75';
             icon.className = 'fa-regular fa-heart hover:text-red-500';
-            icon_three.className = 'fas fa-shopping-cart hover:text-amber-500';
+            icon_three.className = 'fas fa-shopping-cart hover:text-amber-500 ';
             
             image.src = `../css/sourecs/images/products-site/the products/${p_file}/${i}.jpg`
             image.alt ="we dont't have image yet..";
